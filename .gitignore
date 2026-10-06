@@ -14,3 +14,19 @@ desktop.ini
 
 # Helper scripts
 *.bat
+
+# Environment variables & Sensitive configurations
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production
+.env.production.local
+.env*.local
+*.pem
+*.key
+
+# Binary archives & Build artifacts
+*.zip
+*.tar.gz
+*.rar

@@ -443,8 +443,10 @@ document.addEventListener('DOMContentLoaded', () => {
         <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
         <polyline points="22 4 12 14.01 9 11.01"></polyline>
       </svg>
-      <span>${message}</span>
     `;
+    const toastSpan = document.createElement('span');
+    toastSpan.textContent = message;
+    toast.appendChild(toastSpan);
 
     container.appendChild(toast);
     setTimeout(() => toast.classList.add('show'), 50);
@@ -732,8 +734,8 @@ document.addEventListener('DOMContentLoaded', () => {
       const payload = getFormPayload();
       if (!payload) return;
 
-      // 1. Open Gmail Web in new tab (never blank, 100% reliable)
-      window.open(payload.gmailUrl, '_blank');
+      // 1. Open Gmail Web in new tab with noopener & noreferrer
+      window.open(payload.gmailUrl, '_blank', 'noopener,noreferrer');
 
       // 2. Also trigger safe mailto in background in case desktop client is preferred
       triggerSafeMailto(payload.mailtoUrl);
@@ -757,7 +759,7 @@ document.addEventListener('DOMContentLoaded', () => {
     btnSendOutlook.addEventListener('click', () => {
       const payload = getFormPayload();
       if (!payload) return;
-      window.open(payload.outlookUrl, '_blank');
+      window.open(payload.outlookUrl, '_blank', 'noopener,noreferrer');
       showToast(
         currentLang === 'fr'
           ? 'Ouverture d\'Outlook Web...'
