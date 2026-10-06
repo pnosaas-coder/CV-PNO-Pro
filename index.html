@@ -1,0 +1,1411 @@
+<!DOCTYPE html>
+<html lang="fr" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="CV en ligne de Philippe NOUGOUE | Senior Planning Engineer & Project Controls Manager. PMP® certifié n° 4125591, Expert Oracle Primavera P6, EVM, Forensic Delay Analysis (TIA), mégaprojets EPC (Énergie, Oil & Gas, Hydroélectrique, Pipeline, Offshore > $8 Md).">
+  <meta name="author" content="Philippe NOUGOUE">
+  <title>Philippe NOUGOUE | Senior Planning Engineer & Project Controls Manager</title>
+
+  <!-- Google Fonts : Inter, Playfair Display, JetBrains Mono -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;0,700;1,400;1,600;1,700&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/print.css" media="print">
+
+  <!-- Favicon / Vector Icon Or -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='24' fill='%230F0F13'/><rect x='4' y='4' width='92' height='92' rx='20' fill='none' stroke='%23D4A843' stroke-width='4'/><text x='50' y='66' font-size='44' font-weight='800' font-family='sans-serif' text-anchor='middle' fill='%23D4A843'>PN</text></svg>">
+</head>
+<body>
+
+  <!-- Inline SVG Texture Noise Filter (feTurbulence) -->
+  <svg class="noise-overlay" aria-hidden="true">
+    <filter id="noiseFilter">
+      <feTurbulence type="fractalNoise" baseFrequency="0.8" numOctaves="3" stitchTiles="stitch" />
+    </filter>
+    <rect width="100%" height="100%" filter="url(#noiseFilter)" />
+  </svg>
+
+  <!-- Background Animated CPM Network Canvas -->
+  <canvas id="bg-canvas"></canvas>
+
+  <!-- Ambient Glow Orbs -->
+  <div class="glow-orb glow-orb-1"></div>
+  <div class="glow-orb glow-orb-2"></div>
+
+  <!-- =========================================================================
+       1. NAVBAR — LA SIGNATURE FLOTTANTE EN PILULE
+       ========================================================================= -->
+  <div class="navbar-wrap">
+    <header class="navbar-pill">
+      <a href="#hero" class="nav-brand" aria-label="Accueil Philippe NOUGOUE">
+        <div class="brand-badge">PN</div>
+        <div class="brand-text">
+          <span class="brand-name">Philippe NOUGOUE</span>
+          <span class="brand-role">Project Controls Pro</span>
+        </div>
+      </a>
+
+      <!-- Desktop Navigation Menu -->
+      <nav>
+        <ul class="nav-menu" id="nav-menu">
+          <li><a href="#about" class="nav-link" data-i18n="nav_about">À Propos</a></li>
+          <li><a href="#experience" class="nav-link" data-i18n="nav_experience">Expérience</a></li>
+          <li><a href="#evm-sim" class="nav-link" data-i18n="nav_evm">Simulateur EVM</a></li>
+          <li><a href="#skills" class="nav-link" data-i18n="nav_skills">Compétences</a></li>
+          <li><a href="#projects" class="nav-link" data-i18n="nav_portfolio">Grands Projets</a></li>
+          <li><a href="#education" class="nav-link" data-i18n="nav_education">Formations & Certifications</a></li>
+          <li><a href="#contact" class="nav-link" data-i18n="nav_contact">Contact</a></li>
+        </ul>
+      </nav>
+
+      <!-- Action Controls -->
+      <div class="nav-actions">
+        <!-- Language Switcher (FR <-> EN) -->
+        <button class="ctrl-btn lang-switch" id="lang-toggle" title="Switch Language (FR / EN)">EN</button>
+
+        <!-- Theme Switcher (Dark <-> Light) -->
+        <button class="ctrl-btn" id="theme-toggle" title="Basculer le thème (Sombre / Clair)">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="12" cy="12" r="5"></circle>
+            <line x1="12" y1="1" x2="12" y2="3"></line>
+            <line x1="12" y1="21" x2="12" y2="23"></line>
+            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+            <line x1="1" y1="12" x2="3" y2="12"></line>
+            <line x1="21" y1="12" x2="23" y2="12"></line>
+            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+          </svg>
+        </button>
+
+        <!-- Download CV / Print Button -->
+        <button class="btn btn-primary btn-sm trigger-print-cv" title="Télécharger ou imprimer le CV au format PDF A4">
+          <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+            <polyline points="7 10 12 15 17 10"></polyline>
+            <line x1="12" y1="15" x2="12" y2="3"></line>
+          </svg>
+          <span data-i18n="nav_download_cv">Télécharger CV</span>
+        </button>
+
+        <!-- Mobile Menu Hamburger -->
+        <button class="ctrl-btn hamburger-btn" id="hamburger-btn" aria-label="Menu Mobile">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <line x1="3" y1="12" x2="21" y2="12"></line>
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <line x1="3" y1="18" x2="21" y2="18"></line>
+          </svg>
+        </button>
+      </div>
+    </header>
+  </div>
+
+  <main>
+    <!-- =========================================================================
+         2. SECTION HERO — LA PREMIÈRE IMPRESSION CINÉMATOGRAPHIQUE
+         ========================================================================= -->
+    <section class="hero-section" id="hero">
+      <div class="container hero-grid">
+        <div class="hero-content">
+          <div class="hero-badge-row">
+            <div class="status-badge">
+              <span class="status-pulse"></span>
+              <span data-i18n="status_badge">DISPONIBLE IMMÉDIATEMENT • CAPEX > $8 Md</span>
+            </div>
+            <span class="mono-badge">PMP® n° 4125591</span>
+            <span class="mono-badge">Primavera P6 Expert</span>
+          </div>
+
+          <div class="hero-title">
+            <h1 class="hero-title-name">Philippe NOUGOUE</h1>
+            <span class="hero-subtitle-dramatic" data-i18n="hero_title_role">Senior Planning Engineer & Project Controls Manager</span>
+          </div>
+
+          <p class="hero-summary" data-i18n="hero_summary">
+            20+ années d’expertise éprouvée dans la gouvernance planning, coûts, risques et reporting sur mégaprojets <strong>EPC / EPCC / EPCM</strong> internationaux (Énergie, Oil & Gas, Hydroélectrique, Raffinerie, Pipeline & Offshore). Conseiller de confiance des Directeurs de Projet sur programmes jusqu'à <strong>12 000 activités P6</strong> et budgets jusqu'à <strong>2,5 milliards USD</strong>.
+          </p>
+
+          <div class="hero-cta-group">
+            <button class="btn btn-primary trigger-print-cv">
+              <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                <polyline points="7 10 12 15 17 10"></polyline>
+                <line x1="12" y1="15" x2="12" y2="3"></line>
+              </svg>
+              <span data-i18n="hero_btn_download">Télécharger mon CV (PDF)</span>
+            </button>
+            <a href="https://wa.me/237677481161?text=Bonjour%20M.%20Philippe%20NOUGOUE%2C%20je%20souhaite%20échanger%20avec%20vous%20concernant%20un%20projet." target="_blank" rel="noopener noreferrer" class="btn-whatsapp-hero" title="Échanger directement sur WhatsApp">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/>
+              </svg>
+              <span data-i18n="hero_btn_whatsapp">WhatsApp Direct</span>
+            </a>
+            <a href="#contact" class="btn btn-secondary">
+              <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                <polyline points="22,6 12,13 2,6"></polyline>
+              </svg>
+              <span data-i18n="hero_btn_contact">Me Contacter</span>
+            </a>
+            <a href="#evm-sim" class="btn btn-secondary" title="Accéder au simulateur Earned Value Management">
+              <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <line x1="18" y1="20" x2="18" y2="10"></line>
+                <line x1="12" y1="20" x2="12" y2="4"></line>
+                <line x1="6" y1="20" x2="6" y2="14"></line>
+              </svg>
+              <span data-i18n="hero_btn_sim">Simulateur EVM</span>
+            </a>
+          </div>
+
+          <!-- Hero Metrics Strip -->
+          <div class="hero-stats-grid">
+            <div class="stat-item">
+              <span class="stat-value">20+</span>
+              <span class="stat-label" data-i18n="stat_exp">Années d’Expérience</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-value">&gt; $8 Md</span>
+              <span class="stat-label" data-i18n="stat_portfolio">Portefeuille Piloté</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-value">$2.5 Md</span>
+              <span class="stat-label" data-i18n="stat_max_proj">Plus Gros Mégaprojet</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-value">~12 000</span>
+              <span class="stat-label" data-i18n="stat_ims">Activités IMS / P6</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Executive Visual Profile Card -->
+        <div class="hero-visual">
+          <div class="profile-card">
+            <div class="profile-img-wrap">
+              <img src="assets/profile.jpg" alt="Philippe NOUGOUE — Senior Planning Engineer & Project Controls Manager" class="profile-img" loading="eager" width="400" height="400">
+            </div>
+            <div class="profile-floating-badge">
+              <div class="p-cert-badges">
+                <span class="cert-pill">PMP® 4125591</span>
+                <span class="cert-pill">P6 EPPM Expert</span>
+              </div>
+              <div style="font-size: 0.78rem; font-family: var(--font-mono); color: var(--accent-gold); font-weight: 600;">
+                FIDIC • SCL Delay
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         3. A PROPOS — LE MANIFESTE PERSONNEL (DEUX COLONNES)
+         ========================================================================= -->
+    <section class="about-section" id="about">
+      <div class="container">
+        <div class="about-grid">
+          <div>
+            <span class="section-tag" data-i18n="about_tag">MANIFESTE PROFESSIONNEL</span>
+            <h2 class="about-left-title serif-dramatic" data-i18n="about_title">
+              Maîtrise & Gouvernance des Mégaprojets
+            </h2>
+            <p style="margin-top: 16px; font-size: 0.95rem; color: var(--text-muted);" data-i18n="about_subtitle">
+              Conseiller stratégique des comités de direction et garant de l'intégrité contractuelle des délais et des coûts.
+            </p>
+          </div>
+
+          <div class="about-divider-line"></div>
+
+          <div class="about-manifesto-text">
+            <p data-i18n="about_p1">
+              Senior Planning & Project Controls Manager disposant de <strong class="about-manifesto-highlight">20+ ans d'expérience</strong> dans le pilotage de la gouvernance planning, coûts, risques et reporting sur des mégaprojets <strong>EPC / EPCC / EPCM</strong> dans les secteurs Énergie, Oil & Gas, Hydroélectrique, Raffinerie, Pipeline et Offshore — avec un portefeuille CAPEX supérieur à <strong class="about-manifesto-highlight">8 milliards USD</strong>.
+            </p>
+            <p style="margin-top: 16px;" data-i18n="about_p2">
+              Certifié <strong>PMP® (n° 4125591)</strong> et <strong>Oracle Primavera P6 (Expert, 15+ ans)</strong>. Expérience confirmée de pilotage du Planning Directeur Intégré (IMS) sur des programmes allant jusqu'à <strong>~12 000 activités</strong>, d'encadrement d'équipes Project Controls pluridisciplinaires, de mise en œuvre de la gouvernance <strong>Earned Value Management (EVM)</strong>, de pilotage des prévisions de délais et de coûts, et de production d'analyses exécutives via tableaux de bord <strong>Power BI</strong>.
+            </p>
+            <p style="margin-top: 16px;" data-i18n="about_p3">
+              Expertise reconnue en analyse du chemin critique (CPM), gouvernance qualité planning <strong>DCMA-14</strong>, analyse de risque probabiliste (QSRA), <strong>Time Impact Analysis (TIA)</strong>, dossiers de prolongation de délai (EOT) et substantiation des réclamations sous cadre <strong>FIDIC</strong> et <strong>SCL Delay & Disruption Protocol</strong>. Conseiller de confiance des Directeurs de Projet sur mégaprojets greenfield et brownfield, onshore et offshore. Français langue maternelle, anglais professionnel courant.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         4. EXPÉRIENCE PROFESSIONNELLE — LA TIMELINE VIVANTE
+         ========================================================================= -->
+    <section id="experience">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag" data-i18n="exp_tag">PARCOURS SUR MÉGAPROJETS</span>
+          <h2 class="section-title" data-i18n="exp_title">Expérience Professionnelle Confirmée</h2>
+          <p class="section-desc" data-i18n="exp_desc">
+            20 années de leadership sur les chantiers et directions de projets les plus exigeants de l'industrie mondiale.
+          </p>
+        </div>
+
+        <!-- Filter tabs -->
+        <div class="filter-tabs">
+          <button class="filter-btn active" data-filter="all" data-i18n="tab_all">Tous les Projets</button>
+          <button class="filter-btn" data-filter="energy" data-i18n="tab_energy">Énergie & Hydroélectrique</button>
+          <button class="filter-btn" data-filter="oilgas" data-i18n="tab_oilgas">Oil & Gas / Offshore</button>
+          <button class="filter-btn" data-filter="infra" data-i18n="tab_infra">Pipeline & Infrastructure</button>
+        </div>
+
+        <div class="timeline">
+          <!-- Exp 1: GE Vernova Nachtigal -->
+          <div class="timeline-item" data-category="energy">
+            <div class="timeline-dot"></div>
+            <div class="experience-card">
+              <div class="exp-header">
+                <div>
+                  <h3 class="exp-role">Lead Planning & Project Controls Manager</h3>
+                  <div class="exp-company">GE Vernova — Centrale Hydroélectrique Nachtigal EPCC (420 MW) | Client : NHPC</div>
+                </div>
+                <div class="exp-badge-group">
+                  <span class="exp-period">Mars 2023 – Déc. 2025</span>
+                  <span class="exp-budget">CAPEX : $1.2 Md USD</span>
+                </div>
+              </div>
+
+              <div class="exp-meta-row">
+                <div class="exp-meta-item"><span class="mono-badge">Greenfield EPCC</span></div>
+                <div class="exp-meta-item"><span>Lot EM1 Électromécanique • Consortium GE Vernova (Leader) & Elecnor</span></div>
+                <div class="exp-meta-item"><span class="mono-badge">IMS ~12 000 Activités</span></div>
+              </div>
+
+              <p class="exp-desc">
+                Direction intégrale de la gouvernance planning et project controls du lot électromécanique EM1. Élaboration et mise à jour du Planning Directeur Intégré (IMS) sous Primavera P6, synchronisation des interfaces complexes avec le génie civil du barrage et pilotage du chemin critique.
+              </p>
+
+              <div class="exp-highlights-title" data-i18n="exp_highlights_label">Responsabilités & Réalisations Clés :</div>
+              <ul class="exp-highlights-list">
+                <li>Gouvernance Earned Value Management (EVM) hebdomadaire et mensuelle : calcul rigoureux du SPI/CPI, suivi des courbes en S et prévisions fiables d'atterrissage (EAC / ETC / VAC).</li>
+                <li>Production et présentation des rapports exécutifs pour le comité de pilotage NHPC / prêteurs internationaux via tableaux de bord Power BI.</li>
+                <li>Instruction et substantiation des dossiers de prolongation de délai (EOT / Claims) par la méthodologie Time Impact Analysis (TIA) sous contrat FIDIC.</li>
+                <li>Audits qualité planning selon le référentiel DCMA-14 et simulations probabilistes de risques (QSRA) sous Primavera Risk Analysis.</li>
+              </ul>
+
+              <div class="exp-tools-row">
+                <span class="tool-tag">Oracle Primavera P6 EPPM</span>
+                <span class="tool-tag">EVM (Earned Value)</span>
+                <span class="tool-tag">Power BI & DAX</span>
+                <span class="tool-tag">Contrat FIDIC</span>
+                <span class="tool-tag">SCL Delay Protocol</span>
+                <span class="tool-tag">DCMA-14</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Exp 2: TotalEnergies Congo -->
+          <div class="timeline-item" data-category="oilgas">
+            <div class="timeline-dot"></div>
+            <div class="experience-card">
+              <div class="exp-header">
+                <div>
+                  <h3 class="exp-role">Senior Planning Lead — Contrôle de Portefeuille Multi-Packages</h3>
+                  <div class="exp-company">TotalEnergies — République du Congo</div>
+                </div>
+                <div class="exp-badge-group">
+                  <span class="exp-period">Janv. 2022 – Fév. 2023</span>
+                  <span class="exp-budget">CAPEX : $1.5 Md+ USD</span>
+                </div>
+              </div>
+
+              <div class="exp-meta-row">
+                <div class="exp-meta-item"><span class="mono-badge">Brownfield Offshore</span></div>
+                <div class="exp-meta-item"><span>4 Packages Majeurs Simultanés : ALIMA, NKOSSA, SENDJI, DJENO</span></div>
+              </div>
+
+              <p class="exp-desc">
+                Supervision et gouvernance planning globale du portefeuille de packages offshore complexes. Coordination des plannings d'interventions sur plateformes en production, gestion des arrêts techniques et nivellement des ressources partagées.
+              </p>
+
+              <div class="exp-highlights-title" data-i18n="exp_highlights_label">Responsabilités & Réalisations Clés :</div>
+              <ul class="exp-highlights-list">
+                <li>Consolidation d'un planning maître intégré multi-sites sous Primavera P6, synchronisant les campagnes maritimes et logistiques.</li>
+                <li>Mise en œuvre d'une gouvernance Project Controls standardisée entre les différents contractors et la direction de filiale TotalEnergies.</li>
+                <li>Reporting mensuel d'avancement (MPR) et analyse d'impact des dérives sur le chemin critique des puits et des installations de surface.</li>
+              </ul>
+
+              <div class="exp-tools-row">
+                <span class="tool-tag">Primavera P6</span>
+                <span class="tool-tag">Multi-Packages Governance</span>
+                <span class="tool-tag">Offshore Logistics</span>
+                <span class="tool-tag">Power BI</span>
+                <span class="tool-tag">Risk Assessment</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Exp 3: Perenco Pipeline -->
+          <div class="timeline-item" data-category="infra">
+            <div class="timeline-dot"></div>
+            <div class="experience-card">
+              <div class="exp-header">
+                <div>
+                  <h3 class="exp-role">Planning Manager — Pipeline EPC 100 km</h3>
+                  <div class="exp-company">Perenco — Cameroun</div>
+                </div>
+                <div class="exp-badge-group">
+                  <span class="exp-period">Mai 2016 – Janv. 2019</span>
+                  <span class="exp-budget">CAPEX : $600 M USD</span>
+                </div>
+              </div>
+
+              <div class="exp-meta-row">
+                <div class="exp-meta-item"><span class="mono-badge">Greenfield EPC</span></div>
+                <div class="exp-meta-item"><span>Pipeline 100 km Onshore & Offshore • Mission de 33 mois</span></div>
+              </div>
+
+              <p class="exp-desc">
+                Direction du contrôle des délais et de l'ordonnancement pour un projet stratégique de transport d'hydrocarbures reliant les champs gaziers aux terminaux d'expédition.
+              </p>
+
+              <div class="exp-highlights-title" data-i18n="exp_highlights_label">Responsabilités & Réalisations Clés :</div>
+              <ul class="exp-highlights-list">
+                <li>Création du Baseline Niveau 4 (ingénierie, approvisionnement tuyauterie, tirage et pose sous-marine, tests hydrostatiques).</li>
+                <li>Contrôle rigoureux des cadences de pose et d'ensouillage avec prévisions d'atterrissage hebdomadaires.</li>
+                <li>Traitement proactif des demandes de modification contractuelle (Change Orders) et respect de la fenêtre de mise en gaz.</li>
+              </ul>
+
+              <div class="exp-tools-row">
+                <span class="tool-tag">Primavera P6</span>
+                <span class="tool-tag">EPC Contract Management</span>
+                <span class="tool-tag">S-Curves & Cashflow</span>
+                <span class="tool-tag">Change Management</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Exp 4: TotalEnergies Gabon Anguille -->
+          <div class="timeline-item" data-category="energy">
+            <div class="timeline-dot"></div>
+            <div class="experience-card">
+              <div class="exp-header">
+                <div>
+                  <h3 class="exp-role">Ingénieur Projet & Planning — Redéveloppement Centrale Électrique</h3>
+                  <div class="exp-company">TotalEnergies — Gabon (Port-Gentil)</div>
+                </div>
+                <div class="exp-badge-group">
+                  <span class="exp-period">Mars 2012 – Mai 2013</span>
+                  <span class="exp-budget">CAPEX : $2.5 Md USD</span>
+                </div>
+              </div>
+
+              <div class="exp-meta-row">
+                <div class="exp-meta-item"><span class="mono-badge">Mégaprojet Brownfield</span></div>
+                <div class="exp-meta-item"><span>Centrale Électrique Anguille • Alimentation Haute Fiabilité</span></div>
+              </div>
+
+              <p class="exp-desc">
+                Planification et ordonnancement des travaux de modernisation et d'extension de la centrale électrique alimentant le champ pétrolier mature d'Anguille.
+              </p>
+
+              <div class="exp-tools-row">
+                <span class="tool-tag">Primavera P6</span>
+                <span class="tool-tag">Tie-ins Planning</span>
+                <span class="tool-tag">Power Generation</span>
+                <span class="tool-tag">Interface Management</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Exp 5: SONARA Refinery -->
+          <div class="timeline-item" data-category="oilgas">
+            <div class="timeline-dot"></div>
+            <div class="experience-card">
+              <div class="exp-header">
+                <div>
+                  <h3 class="exp-role">Ingénieur Projet & Planning — Arrêt Technique Raffinerie</h3>
+                  <div class="exp-company">Friedlander — Foster Wheeler — Cameroun</div>
+                </div>
+                <div class="exp-badge-group">
+                  <span class="exp-period">Oct. 2011 – Fév. 2012</span>
+                  <span class="exp-budget">CAPEX : $600 M USD</span>
+                </div>
+              </div>
+
+              <div class="exp-meta-row">
+                <div class="exp-meta-item"><span class="mono-badge">Arrêt Technique (TAR)</span></div>
+                <div class="exp-meta-item"><span>Raffinerie SONARA • Maintenance Lourde 24/7</span></div>
+              </div>
+
+              <p class="exp-desc">
+                Ordonnancement horaire critique des travaux de révision générale, changement d'équipements lourds sous pression et redémarrage des unités.
+              </p>
+
+              <div class="exp-tools-row">
+                <span class="tool-tag">Primavera P6</span>
+                <span class="tool-tag">Turnaround (TAR)</span>
+                <span class="tool-tag">Hourly Scheduling</span>
+                <span class="tool-tag">Resource Leveling</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Exp 6: FPSO MODEC -->
+          <div class="timeline-item" data-category="oilgas">
+            <div class="timeline-dot"></div>
+            <div class="experience-card">
+              <div class="exp-header">
+                <div>
+                  <h3 class="exp-role">Ingénieur Projet & Planning — Commissioning FPSO</h3>
+                  <div class="exp-company">ORSAM Oil & Gas — MODEC (Japon) — Offshore Ghana</div>
+                </div>
+                <div class="exp-badge-group">
+                  <span class="exp-period">Juin 2013 – Mai 2014</span>
+                  <span class="exp-budget">CAPEX : $250 M USD</span>
+                </div>
+              </div>
+
+              <div class="exp-meta-row">
+                <div class="exp-meta-item"><span class="mono-badge">Offshore FPSO</span></div>
+                <div class="exp-meta-item"><span>FPSO MV21 Kwame Nkrumah • Unité de Production Gaz & Pétrole</span></div>
+              </div>
+
+              <p class="exp-desc">
+                Suivi du planning de commissioning, coordination des systèmes de traitement des gaz et pétrole brut, suivi des punch-lists jusqu'à l'atteinte du premier baril.
+              </p>
+
+              <div class="exp-tools-row">
+                <span class="tool-tag">Primavera P6</span>
+                <span class="tool-tag">FPSO Systems</span>
+                <span class="tool-tag">Commissioning</span>
+                <span class="tool-tag">Offshore Safety</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Exp 7: Prunus Engineering -->
+          <div class="timeline-item" data-category="infra">
+            <div class="timeline-dot"></div>
+            <div class="experience-card">
+              <div class="exp-header">
+                <div>
+                  <h3 class="exp-role">Project Manager (Planning, Controls & Appels d'Offres)</h3>
+                  <div class="exp-company">Prunus Engineering — Cameroun</div>
+                </div>
+                <div class="exp-badge-group">
+                  <span class="exp-period">Janv. 2026 – En cours</span>
+                  <span class="exp-budget">Projets Stratégiques</span>
+                </div>
+              </div>
+
+              <div class="exp-meta-row">
+                <div class="exp-meta-item"><span class="mono-badge">Ferroviaire & Infrastructure</span></div>
+                <div class="exp-meta-item"><span>Appel d'offres international : 512,7 km rails UIC 54 (~40 M USD, Banque Mondiale)</span></div>
+              </div>
+
+              <p class="exp-desc">
+                Pilotage des offres techniques et plannings de réalisation pour d'importants marchés d'infrastructures de transport et projets industriels.
+              </p>
+
+              <div class="exp-tools-row">
+                <span class="tool-tag">Project Controls</span>
+                <span class="tool-tag">Tender & Bidding</span>
+                <span class="tool-tag">Rail Infrastructure</span>
+                <span class="tool-tag">World Bank Framework</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Synthèse Expériences Antérieures -->
+        <div style="background: var(--bg-tertiary); border: 1px solid var(--border-subtle); border-radius: var(--radius-lg); padding: 26px; margin-top: 30px;">
+          <h4 style="color: var(--accent-gold); margin-bottom: 12px; font-size: 1.05rem;">Parcours Précédent & Fondations Métier (2006 – 2021) :</h4>
+          <ul style="list-style: none; display: flex; flex-direction: column; gap: 8px; font-size: 0.92rem; color: var(--text-secondary);">
+            <li><strong>2019 – 2021 :</strong> Prunus Engineering — Project Manager pour projets industriels Oil & Gas (SCDP, Schlumberger, Halliburton, Perenco).</li>
+            <li><strong>2015 – 2016 :</strong> Foure Lagadec Gabon — Planning Engineer, rénovation de plateformes offshore Perenco ($300 M USD) à Port-Gentil.</li>
+            <li><strong>2006 – 2011 :</strong> Chantier Naval & Industriel du Cameroun — Support Planning, rénovation des rigs de forage TRIDENT 14 & SAIPEM Tad.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         5. SIMULATEUR EVM LIVE & S-CURVE
+         ========================================================================= -->
+    <section id="evm-sim">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag" data-i18n="evm_tag">MOTEUR DE DIAGNOSTIC LIVE</span>
+          <h2 class="section-title" data-i18n="evm_title">Simulateur Interactif de Contrôle de Projet (EVM & S-Curve)</h2>
+          <p class="section-desc" data-i18n="evm_desc">
+            Testez en temps réel la gouvernance Earned Value Management (SPI, CPI, Variances, prévisions EAC) selon les standards AACE, PMI et SCL Protocol.
+          </p>
+        </div>
+
+        <div class="evm-simulator-card">
+          <!-- Presets -->
+          <div class="evm-presets-row">
+            <span style="font-size: 0.8rem; font-family: var(--font-mono); color: var(--text-muted);" data-i18n="evm_presets_label">SCÉNARIOS TYPES :</span>
+            <button class="preset-chip active" data-preset="optimal" data-i18n="evm_preset_optimal">Projet Exemplaire (SPI &gt; 1, CPI &gt; 1)</button>
+            <button class="preset-chip" data-preset="delay" data-i18n="evm_preset_delay">Retard avec Marge Coûts</button>
+            <button class="preset-chip" data-preset="crisis" data-i18n="evm_preset_crisis">Crise EPC / Claim Majeur</button>
+            <button class="preset-chip" data-preset="baseline" data-i18n="evm_preset_baseline">Jalon Baseline Cible (1.00)</button>
+          </div>
+
+          <div class="evm-grid">
+            <!-- Controls Form -->
+            <div class="evm-controls">
+              <!-- Slider 1: BAC -->
+              <div class="slider-group">
+                <div class="slider-header">
+                  <span class="slider-label" data-i18n="evm_bac_label">Budget Global (BAC)</span>
+                  <span class="slider-val-box" id="val-bac">$1,200.0M</span>
+                </div>
+                <input type="range" class="custom-range" id="evm-bac" min="100" max="2500" step="50" value="1200">
+                <span style="font-size: 0.75rem; color: var(--text-muted);" data-i18n="evm_bac_sub">Budget at Completion (ex: Mégaprojet Nachtigal $1.2 Md)</span>
+              </div>
+
+              <!-- Slider 2: Planned Progress % -->
+              <div class="slider-group">
+                <div class="slider-header">
+                  <span class="slider-label" data-i18n="evm_pv_label">Avancement Planifié (PV %)</span>
+                  <span class="slider-val-box" id="val-planned">65%</span>
+                </div>
+                <input type="range" class="custom-range" id="evm-planned" min="5" max="100" step="1" value="65">
+                <span style="font-size: 0.75rem; color: var(--text-muted);" data-i18n="evm_pv_sub">Valeur planifiée selon le Baseline Schedule P6</span>
+              </div>
+
+              <!-- Slider 3: Actual Progress % -->
+              <div class="slider-group">
+                <div class="slider-header">
+                  <span class="slider-label" data-i18n="evm_ev_label">Avancement Physique Réel (EV %)</span>
+                  <span class="slider-val-box" id="val-actual">68%</span>
+                </div>
+                <input type="range" class="custom-range" id="evm-actual" min="5" max="100" step="1" value="68">
+                <span style="font-size: 0.75rem; color: var(--text-muted);" data-i18n="evm_ev_sub">Earned Value réelle mesurée sur site</span>
+              </div>
+
+              <!-- Slider 4: Actual Cost (AC) -->
+              <div class="slider-group">
+                <div class="slider-header">
+                  <span class="slider-label" data-i18n="evm_ac_label">Coût Réel Engagé (AC)</span>
+                  <span class="slider-val-box" id="val-cost">$760.0M</span>
+                </div>
+                <input type="range" class="custom-range" id="evm-cost" min="50" max="2500" step="20" value="760">
+                <span style="font-size: 0.75rem; color: var(--text-muted);" data-i18n="evm_ac_sub">Actual Cost of Work Performed à date</span>
+              </div>
+            </div>
+
+            <!-- Dashboard Output -->
+            <div class="evm-dashboard">
+              <div class="evm-kpi-row">
+                <div class="evm-kpi-card" id="card-spi">
+                  <div class="evm-kpi-title">
+                    <span>SPI (Schedule Index)</span>
+                    <span class="mono-badge">EV / PV</span>
+                  </div>
+                  <div class="evm-kpi-num" id="kpi-spi">1.05</div>
+                  <div style="font-size: 0.8rem; color: var(--text-secondary);">Écart Délais (SV) : <strong id="kpi-sv">+$36.0M</strong></div>
+                </div>
+
+                <div class="evm-kpi-card" id="card-cpi">
+                  <div class="evm-kpi-title">
+                    <span>CPI (Cost Index)</span>
+                    <span class="mono-badge">EV / AC</span>
+                  </div>
+                  <div class="evm-kpi-num" id="kpi-cpi">1.07</div>
+                  <div style="font-size: 0.8rem; color: var(--text-secondary);">Écart Coûts (CV) : <strong id="kpi-cv">+$56.0M</strong></div>
+                </div>
+              </div>
+
+              <!-- S-Curve SVG Chart Container -->
+              <div class="s-curve-chart-container">
+                <svg id="s-curve-svg" class="s-curve-svg" viewBox="0 0 450 160"></svg>
+                <div class="s-curve-legend">
+                  <span class="legend-item"><span class="legend-dot" style="background: #3B82F6;"></span> Planifié (PV)</span>
+                  <span class="legend-item"><span class="legend-dot" style="background: #10B981;"></span> Valeur Acquise (EV)</span>
+                  <span class="legend-item"><span class="legend-dot" style="background: #D4A843;"></span> Coût Réel (AC)</span>
+                </div>
+              </div>
+
+              <!-- Real-time Diagnosis Interpretation -->
+              <div class="evm-status-box">
+                <div class="evm-status-title" id="evm-diag-title">Performance Optimale (Ahead of Schedule & Under Budget)</div>
+                <div class="evm-status-text" id="evm-diag-desc">
+                  Projet exemplaire. Avance de planning (+36.0M$) et économie budgétaire (+56.0M$). Chemin critique sécurisé.
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         6. COMPÉTENCES CLÉS & EXPERTISES
+         ========================================================================= -->
+    <section id="skills">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag" data-i18n="skills_tag">MATRICE D'EXPERTISE</span>
+          <h2 class="section-title" data-i18n="skills_title">Compétences Clés & Outils Métier</h2>
+          <p class="section-desc" data-i18n="skills_desc">
+            Une maîtrise méthodologique certifiée et forgée sur les plus grands programmes d'ingénierie et de construction.
+          </p>
+        </div>
+
+        <div class="skills-grid">
+          <!-- Category 1 -->
+          <div class="skill-category-card">
+            <div class="skill-cat-header">
+              <div class="skill-cat-icon">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+                  <line x1="16" y1="2" x2="16" y2="6"></line>
+                  <line x1="8" y1="2" x2="8" y2="6"></line>
+                  <line x1="3" y1="10" x2="21" y2="10"></line>
+                </svg>
+              </div>
+              <div>
+                <h3 class="skill-cat-title" data-i18n="skill_cat1_title">Planification & Ordonnancement</h3>
+                <span class="skill-cat-sub" data-i18n="skill_cat1_sub">Oracle Primavera P6 (Expert 15+ ans)</span>
+              </div>
+            </div>
+            <div class="skill-item-list">
+              <div class="skill-item">
+                <div class="skill-meta"><span class="skill-name">Oracle Primavera P6 / P6 EPPM</span><span class="skill-level-text">99%</span></div>
+                <div class="progress-track"><div class="progress-bar" style="width: 99%;"></div></div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-meta"><span class="skill-name">Analyse du Chemin Critique (CPM)</span><span class="skill-level-text">98%</span></div>
+                <div class="progress-track"><div class="progress-bar" style="width: 98%;"></div></div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-meta"><span class="skill-name">Planning Directeur Intégré (IMS ~12k)</span><span class="skill-level-text">97%</span></div>
+                <div class="progress-track"><div class="progress-bar" style="width: 97%;"></div></div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-meta"><span class="skill-name">Acumen Fuse & Qualité DCMA-14</span><span class="skill-level-text">94%</span></div>
+                <div class="progress-track"><div class="progress-bar" style="width: 94%;"></div></div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-meta"><span class="skill-name">Primavera Risk Analysis (QSRA Monte Carlo)</span><span class="skill-level-text">90%</span></div>
+                <div class="progress-track"><div class="progress-bar" style="width: 90%;"></div></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Category 2 -->
+          <div class="skill-category-card">
+            <div class="skill-cat-header">
+              <div class="skill-cat-icon">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <line x1="18" y1="20" x2="18" y2="10"></line>
+                  <line x1="12" y1="20" x2="12" y2="4"></line>
+                  <line x1="6" y1="20" x2="6" y2="14"></line>
+                </svg>
+              </div>
+              <div>
+                <h3 class="skill-cat-title" data-i18n="skill_cat2_title">Project Controls & EVM</h3>
+                <span class="skill-cat-sub" data-i18n="skill_cat2_sub">Valeur Acquise, Coûts & Délais</span>
+              </div>
+            </div>
+            <div class="skill-item-list">
+              <div class="skill-item">
+                <div class="skill-meta"><span class="skill-name">Earned Value Management (SPI, CPI, BCWS/BCWP)</span><span class="skill-level-text">98%</span></div>
+                <div class="progress-track"><div class="progress-bar" style="width: 98%;"></div></div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-meta"><span class="skill-name">Chargement & Prévisions Coûts (EAC/ETC/VAC)</span><span class="skill-level-text">96%</span></div>
+                <div class="progress-track"><div class="progress-bar" style="width: 96%;"></div></div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-meta"><span class="skill-name">Time Impact Analysis (TIA & Forensic)</span><span class="skill-level-text">95%</span></div>
+                <div class="progress-track"><div class="progress-bar" style="width: 95%;"></div></div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-meta"><span class="skill-name">Dossiers de Prolongation de Délai (EOT)</span><span class="skill-level-text">94%</span></div>
+                <div class="progress-track"><div class="progress-bar" style="width: 94%;"></div></div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-meta"><span class="skill-name">Change Management & Mesure d'Avancement</span><span class="skill-level-text">95%</span></div>
+                <div class="progress-track"><div class="progress-bar" style="width: 95%;"></div></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Category 3 -->
+          <div class="skill-category-card">
+            <div class="skill-cat-header">
+              <div class="skill-cat-icon">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
+                  <line x1="8" y1="21" x2="16" y2="21"></line>
+                  <line x1="12" y1="17" x2="12" y2="21"></line>
+                </svg>
+              </div>
+              <div>
+                <h3 class="skill-cat-title" data-i18n="skill_cat3_title">Reporting & Analytics</h3>
+                <span class="skill-cat-sub" data-i18n="skill_cat3_sub">Business Intelligence Exécutive</span>
+              </div>
+            </div>
+            <div class="skill-item-list">
+              <div class="skill-item">
+                <div class="skill-meta"><span class="skill-name">Power BI (Tableaux de bord exécutifs, S-Curves)</span><span class="skill-level-text">96%</span></div>
+                <div class="progress-track"><div class="progress-bar" style="width: 96%;"></div></div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-meta"><span class="skill-name">Excel BI (Power Query, Power Pivot, DAX)</span><span class="skill-level-text">95%</span></div>
+                <div class="progress-track"><div class="progress-bar" style="width: 95%;"></div></div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-meta"><span class="skill-name">Rapports Mensuels & Hebdomadaires (MPR / WPR)</span><span class="skill-level-text">98%</span></div>
+                <div class="progress-track"><div class="progress-bar" style="width: 98%;"></div></div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-meta"><span class="skill-name">Reporting Comité de Direction & Prêteurs</span><span class="skill-level-text">97%</span></div>
+                <div class="progress-track"><div class="progress-bar" style="width: 97%;"></div></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Category 4 -->
+          <div class="skill-category-card">
+            <div class="skill-cat-header">
+              <div class="skill-cat-icon">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path>
+                </svg>
+              </div>
+              <div>
+                <h3 class="skill-cat-title" data-i18n="skill_cat4_title">Gouvernance & Standards</h3>
+                <span class="skill-cat-sub" data-i18n="skill_cat4_sub">FIDIC, SCL Protocol & PMP®</span>
+              </div>
+            </div>
+            <div class="skill-item-list">
+              <div class="skill-item">
+                <div class="skill-meta"><span class="skill-name">Cadre Contractuel FIDIC (Clauses 8.4, 8.5, 20.1)</span><span class="skill-level-text">94%</span></div>
+                <div class="progress-track"><div class="progress-bar" style="width: 94%;"></div></div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-meta"><span class="skill-name">SCL Delay & Disruption Protocol (2e éd.)</span><span class="skill-level-text">95%</span></div>
+                <div class="progress-track"><div class="progress-bar" style="width: 95%;"></div></div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-meta"><span class="skill-name">Méthodologie PMBOK / Certifié PMP®</span><span class="skill-level-text">98%</span></div>
+                <div class="progress-track"><div class="progress-bar" style="width: 98%;"></div></div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-meta"><span class="skill-name">Leadership d'Équipes Pluridisciplinaires</span><span class="skill-level-text">96%</span></div>
+                <div class="progress-track"><div class="progress-bar" style="width: 96%;"></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         7. PORTEFEUILLE DE GRANDS PROJETS INTERNATIONAUX (CAPEX > $8 Md)
+         ========================================================================= -->
+    <section id="projects">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag" data-i18n="portfolio_tag">PORTEFEUILLE INTERNATIONAL</span>
+          <h2 class="section-title" data-i18n="portfolio_title">Mégaprojets Phares (CAPEX &gt; $8 Md)</h2>
+          <p class="section-desc" data-i18n="portfolio_desc">
+            Sélection de réalisations emblématiques où la rigueur du contrôle de projet a sécurisé les jalons contractuels et la trajectoire budgétaire.
+          </p>
+        </div>
+
+        <div class="projects-grid">
+          <!-- Project 1: Nachtigal -->
+          <div class="project-card">
+            <div class="project-header-bar">
+              <span class="project-sector">ÉNERGIE / HYDROÉLECTRIQUE</span>
+              <span class="project-value-pill">$1.2 Md USD</span>
+            </div>
+            <div class="project-body">
+              <h3 class="project-title">Centrale Nachtigal EPCC (420 MW)</h3>
+              <p class="project-desc">
+                GE Vernova / NHPC. Lot EM1 Électromécanique. Mégaprojet greenfield EPCC comprenant barrage, usine et évacuateur de crues.
+              </p>
+              <div class="project-kpi-stats">
+                <div class="p-kpi">
+                  <span class="p-kpi-val">~12 000</span>
+                  <span class="p-kpi-lbl">Activités P6 IMS</span>
+                </div>
+                <div class="p-kpi">
+                  <span class="p-kpi-val">100%</span>
+                  <span class="p-kpi-lbl">Conformité FIDIC</span>
+                </div>
+              </div>
+              <div class="project-footer">
+                <span class="mono-badge">Greenfield EPCC</span>
+                <button class="btn btn-secondary btn-sm open-project-modal" data-project="nachtigal" data-i18n="btn_project_details">Détails & Stratégie</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 2: TotalEnergies Congo -->
+          <div class="project-card">
+            <div class="project-header-bar">
+              <span class="project-sector">OFFSHORE BROWNFIELD</span>
+              <span class="project-value-pill">$1.5 Md+ USD</span>
+            </div>
+            <div class="project-body">
+              <h3 class="project-title">Portefeuille TotalEnergies Congo</h3>
+              <p class="project-desc">
+                TotalEnergies Congo. 4 packages offshore simultanés : ALIMA, NKOSSA, SENDJI, DJENO. Gestion de portefeuilles multi-sites.
+              </p>
+              <div class="project-kpi-stats">
+                <div class="p-kpi">
+                  <span class="p-kpi-val">4 Sites</span>
+                  <span class="p-kpi-lbl">Packages Simultanés</span>
+                </div>
+                <div class="p-kpi">
+                  <span class="p-kpi-val">0 Arrêt</span>
+                  <span class="p-kpi-lbl">Non Planifié</span>
+                </div>
+              </div>
+              <div class="project-footer">
+                <span class="mono-badge">Multi-Packages Lead</span>
+                <button class="btn btn-secondary btn-sm open-project-modal" data-project="congo_portfolio" data-i18n="btn_project_details">Détails & Stratégie</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 3: Perenco Pipeline -->
+          <div class="project-card">
+            <div class="project-header-bar">
+              <span class="project-sector">PIPELINE EPC 100 KM</span>
+              <span class="project-value-pill">$600 M USD</span>
+            </div>
+            <div class="project-body">
+              <h3 class="project-title">Pipeline Onshore/Offshore 100 km</h3>
+              <p class="project-desc">
+                Perenco Cameroun. Greenfield EPC sur 33 mois. Pose d'un pipeline critique de transport de gaz et pétrole haute pression.
+              </p>
+              <div class="project-kpi-stats">
+                <div class="p-kpi">
+                  <span class="p-kpi-val">33 Mois</span>
+                  <span class="p-kpi-lbl">Délai Contractuel</span>
+                </div>
+                <div class="p-kpi">
+                  <span class="p-kpi-val">100 km</span>
+                  <span class="p-kpi-lbl">Linéaire Déployé</span>
+                </div>
+              </div>
+              <div class="project-footer">
+                <span class="mono-badge">Planning Manager</span>
+                <button class="btn btn-secondary btn-sm open-project-modal" data-project="perenco_pipeline" data-i18n="btn_project_details">Détails & Stratégie</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 4: TotalEnergies Anguille -->
+          <div class="project-card">
+            <div class="project-header-bar">
+              <span class="project-sector">ÉNERGIE & O&G GABON</span>
+              <span class="project-value-pill">$2.5 Md USD</span>
+            </div>
+            <div class="project-body">
+              <h3 class="project-title">Redéveloppement Centrale Anguille</h3>
+              <p class="project-desc">
+                TotalEnergies Gabon. Port-Gentil. Extension et modernisation électrique de sites en exploitation continue.
+              </p>
+              <div class="project-kpi-stats">
+                <div class="p-kpi">
+                  <span class="p-kpi-val">Mégaprojet</span>
+                  <span class="p-kpi-lbl">Brownfield O&G</span>
+                </div>
+                <div class="p-kpi">
+                  <span class="p-kpi-val">Tie-ins</span>
+                  <span class="p-kpi-lbl">Zéro Incident Réseau</span>
+                </div>
+              </div>
+              <div class="project-footer">
+                <span class="mono-badge">Ingénieur Planning</span>
+                <button class="btn btn-secondary btn-sm open-project-modal" data-project="anguille" data-i18n="btn_project_details">Détails & Stratégie</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 5: Raffinerie SONARA -->
+          <div class="project-card">
+            <div class="project-header-bar">
+              <span class="project-sector">MAINTENANCE RAFFINERIE</span>
+              <span class="project-value-pill">$600 M USD</span>
+            </div>
+            <div class="project-body">
+              <h3 class="project-title">Arrêt Technique Raffinerie SONARA</h3>
+              <p class="project-desc">
+                Foster Wheeler / Friedlander. Grand arrêt technique (TAR) avec révision générale des unités de distillation.
+              </p>
+              <div class="project-kpi-stats">
+                <div class="p-kpi">
+                  <span class="p-kpi-val">24/7</span>
+                  <span class="p-kpi-lbl">Ordonnancement Horaire</span>
+                </div>
+                <div class="p-kpi">
+                  <span class="p-kpi-val">100%</span>
+                  <span class="p-kpi-lbl">Sécurité & Redémarrage</span>
+                </div>
+              </div>
+              <div class="project-footer">
+                <span class="mono-badge">Turnaround Lead</span>
+                <button class="btn btn-secondary btn-sm open-project-modal" data-project="sonara" data-i18n="btn_project_details">Détails & Stratégie</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 6: FPSO MODEC -->
+          <div class="project-card">
+            <div class="project-header-bar">
+              <span class="project-sector">COMMISSIONING FPSO</span>
+              <span class="project-value-pill">$250 M USD</span>
+            </div>
+            <div class="project-body">
+              <h3 class="project-title">FPSO MV21 Kwame Nkrumah</h3>
+              <p class="project-desc">
+                MODEC (Japon) / ORSAM. Offshore Ghana. Unité flottante de production, stockage et déchargement de gaz et pétrole brut.
+              </p>
+              <div class="project-kpi-stats">
+                <div class="p-kpi">
+                  <span class="p-kpi-val">First Oil</span>
+                  <span class="p-kpi-lbl">Jalon Atteint</span>
+                </div>
+                <div class="p-kpi">
+                  <span class="p-kpi-val">Offshore</span>
+                  <span class="p-kpi-lbl">Haute Sûreté</span>
+                </div>
+              </div>
+              <div class="project-footer">
+                <span class="mono-badge">Commissioning Planning</span>
+                <button class="btn btn-secondary btn-sm open-project-modal" data-project="fpso_modec" data-i18n="btn_project_details">Détails & Stratégie</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         8. SECTION FORMATIONS, CERTIFICATIONS & LEADERSHIP (COMPLÈTE)
+         ========================================================================= -->
+    <section id="education">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag" data-i18n="edu_tag">FORMATIONS & CERTIFICATIONS</span>
+          <h2 class="section-title" data-i18n="edu_title">Qualifications Académiques & Accréditations</h2>
+          <p class="section-desc" data-i18n="edu_desc">
+            Un socle académique d'excellence en ingénierie et management stratégique, appuyé par les certifications mondiales les plus rigoureuses.
+          </p>
+        </div>
+
+        <!-- Sous-partie A : Formations Universitaires -->
+        <div style="margin-bottom: 50px;">
+          <h3 style="color: var(--accent-gold); margin-bottom: 24px; font-size: 1.3rem; display: flex; align-items: center; gap: 10px;">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 10v6M2 10l10-5 10 5-10 5z"></path><path d="M6 12v5c3 3 9 3 12 0v-5"></path></svg>
+            <span data-i18n="edu_subtitle_academic">Formations Universitaires & Postgraduates</span>
+          </h3>
+
+          <div class="edu-grid">
+            <!-- MBA -->
+            <div class="edu-card">
+              <div>
+                <span class="edu-year-badge">2026</span>
+                <h4 class="edu-degree">MBA — Ingénierie d'Affaires & Management Stratégique</h4>
+                <p class="edu-institution">EPIM Afrique – École de Management et d'Ingénierie</p>
+              </div>
+              <span class="mono-badge" style="margin-top: 16px; width: fit-content;">Executive Business & Strategy</span>
+            </div>
+
+            <!-- Postgraduate Process -->
+            <div class="edu-card">
+              <div>
+                <span class="edu-year-badge">2013 – 2014</span>
+                <h4 class="edu-degree">Diplôme Postgraduate — Process Design Engineering</h4>
+                <p class="edu-institution">Magnus Global Tech, Bangalore, Inde</p>
+              </div>
+              <span class="mono-badge" style="margin-top: 16px; width: fit-content;">Engineering Design & EPC</span>
+            </div>
+
+            <!-- Postgraduate Piping -->
+            <div class="edu-card">
+              <div>
+                <span class="edu-year-badge">2013 – 2014</span>
+                <h4 class="edu-degree">Diplôme Postgraduate — Piping Design Engineering</h4>
+                <p class="edu-institution">Magnus Global Tech, Bangalore, Inde</p>
+              </div>
+              <span class="mono-badge" style="margin-top: 16px; width: fit-content;">Industrial Piping Systems</span>
+            </div>
+
+            <!-- HND -->
+            <div class="edu-card">
+              <div>
+                <span class="edu-year-badge">2007 – 2008</span>
+                <h4 class="edu-degree">HND — Génie Mécanique (Mechanical Engineering)</h4>
+                <p class="edu-institution">Université de Douala / ENSET, Cameroun</p>
+              </div>
+              <span class="mono-badge" style="margin-top: 16px; width: fit-content;">Fondations d'Ingénierie</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Sous-partie B : Certifications Professionnelles Officielles -->
+        <div style="margin-bottom: 50px;">
+          <h3 style="color: var(--accent-gold); margin-bottom: 24px; font-size: 1.3rem; display: flex; align-items: center; gap: 10px;">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path></svg>
+            <span data-i18n="edu_subtitle_cert">Certifications Professionnelles Officielles</span>
+          </h3>
+
+          <div class="cert-grid">
+            <!-- PMP -->
+            <div class="cert-card">
+              <div class="cert-icon-box">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path></svg>
+              </div>
+              <div class="cert-info">
+                <h4 class="cert-name">PMP® — Project Management Professional</h4>
+                <span class="cert-issuer">Project Management Institute (PMI, USA)</span>
+                <span class="cert-meta">Licence Officielle n° 4125591 • Standard PMBOK</span>
+              </div>
+            </div>
+
+            <!-- Oracle P6 -->
+            <div class="cert-card">
+              <div class="cert-icon-box">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
+              </div>
+              <div class="cert-info">
+                <h4 class="cert-name">Oracle Primavera P6 Certifié</h4>
+                <span class="cert-issuer">TMR Project Consulting</span>
+                <span class="cert-meta">Niveau Expert (15+ ans) • Scheduling & Resource Management</span>
+              </div>
+            </div>
+
+            <!-- PPE Planning Engineer EST -->
+            <div class="cert-card">
+              <div class="cert-icon-box">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+              </div>
+              <div class="cert-info">
+                <h4 class="cert-name">Professional Planning Engineer (PPE)</h4>
+                <span class="cert-issuer">Planning Engineer EST, Égypte</span>
+                <span class="cert-meta">Accréditation ID : 1882 • Ordonnancement Avancé</span>
+              </div>
+            </div>
+
+            <!-- Claims & Delay Analysis -->
+            <div class="cert-card">
+              <div class="cert-icon-box">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 14 14"></polyline></svg>
+              </div>
+              <div class="cert-info">
+                <h4 class="cert-name">Claims Management, EOT & Delay Analysis</h4>
+                <span class="cert-issuer">Planning Engineer EST, Égypte</span>
+                <span class="cert-meta">Accréditation ID : 1907 • Time Impact Analysis (TIA)</span>
+              </div>
+            </div>
+
+            <!-- Primavera Risk Analysis -->
+            <div class="cert-card">
+              <div class="cert-icon-box">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="20" x2="18" y2="10"></line><line x1="12" y1="20" x2="12" y2="4"></line><line x1="6" y1="20" x2="6" y2="14"></line></svg>
+              </div>
+              <div class="cert-info">
+                <h4 class="cert-name">Primavera Risk Analysis — Monte Carlo (QSRA)</h4>
+                <span class="cert-issuer">Planification Probabiliste Avancée</span>
+                <span class="cert-meta">Modélisation des risques délais & coûts sur mégaprojets</span>
+              </div>
+            </div>
+
+            <!-- Power BI & Data Analytics -->
+            <div class="cert-card">
+              <div class="cert-icon-box">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect><line x1="8" y1="21" x2="16" y2="21"></line><line x1="12" y1="17" x2="12" y2="21"></line></svg>
+              </div>
+              <div class="cert-info">
+                <h4 class="cert-name">Power BI & Excel Business Intelligence</h4>
+                <span class="cert-issuer">Tableaux de Bord Exécutifs & Analytics</span>
+                <span class="cert-meta">DAX, Power Query, Power Pivot, Courbes en S & Tendances CPM</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Sous-partie C : Leadership & Langues -->
+        <div>
+          <h3 style="color: var(--accent-gold); margin-bottom: 24px; font-size: 1.3rem; display: flex; align-items: center; gap: 10px;">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg>
+            <span data-i18n="edu_subtitle_lead">Leadership & Maîtrise Linguistique</span>
+          </h3>
+
+          <div class="leadership-grid">
+            <!-- Leadership Card -->
+            <div class="leadership-card">
+              <h4 style="font-size: 1.2rem; font-weight: 700; color: var(--text-primary);" data-i18n="lead_title">Leadership & Management d’Équipes</h4>
+              <ul class="leadership-list">
+                <li data-i18n="lead_item1">Direction et coordination d’équipes Project Controls pluridisciplinaires (Lead Planners, Cost Engineers, Package Planners) sur des sites complexes.</li>
+                <li data-i18n="lead_item2">Gouvernance planning globale et synchronisation d'interfaces critiques sur packages simultanés (jusqu'à 4 sites offshore en parallèle).</li>
+                <li data-i18n="lead_item3">Interlocuteur de confiance et reporting auprès des Clients, Comités de Direction, Prêteurs internationaux et partenaires de Consortiums.</li>
+                <li data-i18n="lead_item4">Expertise en négociation contractuelle, gestion des litiges, instruction de claims et demandes d'Extension of Time (EOT) sous cadre FIDIC.</li>
+                <li data-i18n="lead_item5">Encadrement, mentoring et transfert de compétences méthodologiques pour l'élévation des équipes locales aux standards internationaux.</li>
+              </ul>
+            </div>
+
+            <!-- Languages Card -->
+            <div class="leadership-card">
+              <h4 style="font-size: 1.2rem; font-weight: 700; color: var(--text-primary);" data-i18n="lang_title">Compétences Linguistiques</h4>
+              
+              <!-- Français -->
+              <div class="language-item-box">
+                <div>
+                  <div class="lang-name" data-i18n="lang_fr_name">Français</div>
+                  <div class="lang-desc" data-i18n="lang_fr_desc">Langue maternelle • Rédaction contractuelle et négociation fluide</div>
+                </div>
+                <span class="lang-level-badge" data-i18n="lang_fr_level">Langue Maternelle</span>
+              </div>
+
+              <!-- Anglais -->
+              <div class="language-item-box">
+                <div>
+                  <div class="lang-name" data-i18n="lang_en_name">Anglais</div>
+                  <div class="lang-desc" data-i18n="lang_en_desc">Professionnel courant / Bilingue • Pratique quotidienne en environnements multinationaux depuis 2006 (GE Vernova, MODEC Japon, Foster Wheeler UK/USA)</div>
+                </div>
+                <span class="lang-level-badge" data-i18n="lang_en_level">Courant / Bilingue</span>
+              </div>
+
+              <div style="margin-top: 24px; padding: 14px; background: rgba(212, 168, 67, 0.08); border: 1px solid var(--border-accent); border-radius: var(--radius-md);">
+                <span style="font-size: 0.85rem; color: var(--text-primary); font-weight: 600; display: block;">Environnement International Bilingue :</span>
+                <span style="font-size: 0.8rem; color: var(--text-secondary); margin-top: 4px; display: block;">Animation de comités de pilotage et production de l'ensemble des livrables contractuels indifféremment en anglais ou en français.</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         9. CONTACT & DISPONIBILITÉ IMMÉDIATE
+         ========================================================================= -->
+    <section id="contact">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag" data-i18n="contact_tag">MANDATS & COLLABORATION</span>
+          <h2 class="section-title" data-i18n="contact_title">Engager une Collaboration</h2>
+          <p class="section-desc" data-i18n="contact_desc">
+            Disponible immédiatement pour des mandats de Direction de Contrôle de Projets (Project Controls Manager / Director), Lead Planner Senior ou expertise forensic / EOT.
+          </p>
+        </div>
+
+        <div class="contact-grid">
+          <!-- Information Panel -->
+          <div class="contact-info-panel">
+            <div>
+              <h3 style="margin-bottom: 8px;" data-i18n="contact_box_title">Coordonnées Directes</h3>
+              <p style="font-size: 0.92rem; color: var(--text-secondary);" data-i18n="contact_box_desc">
+                Échange direct et confidentiel sous 24 heures pour toute opportunité de mégaprojet ou audit contractuel.
+              </p>
+
+              <div class="contact-detail-list">
+                <!-- Email -->
+                <div class="contact-item">
+                  <div class="contact-item-left">
+                    <span class="contact-item-icon">
+                      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+                    </span>
+                    <div>
+                      <div class="contact-item-label" data-i18n="contact_label_email">Email Professionnel</div>
+                      <div class="contact-item-val">philippe.nougoue@gmail.com</div>
+                    </div>
+                  </div>
+                  <button class="copy-btn" data-copy="philippe.nougoue@gmail.com" title="Copier l'email">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+                  </button>
+                </div>
+
+                <!-- Phone & WhatsApp Direct -->
+                <div class="contact-item">
+                  <div class="contact-item-left">
+                    <span class="contact-item-icon">
+                      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+                    </span>
+                    <div>
+                      <div class="contact-item-label" data-i18n="contact_label_phone">Téléphone / WhatsApp Direct</div>
+                      <a href="tel:+237677481161" class="contact-item-val" style="color: inherit; text-decoration: none;">+237 677 48 11 61</a>
+                    </div>
+                  </div>
+                  <div style="display: flex; gap: 8px; align-items: center;">
+                    <a href="https://wa.me/237677481161?text=Bonjour%20M.%20Philippe%20NOUGOUE%2C%20je%20souhaite%20échanger%20avec%20vous%20concernant%20un%20projet." target="_blank" rel="noopener noreferrer" class="btn-whatsapp-contact" title="Ouvrir WhatsApp">
+                      <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/>
+                      </svg>
+                      <span>WhatsApp</span>
+                    </a>
+                    <button class="copy-btn" data-copy="+237677481161" title="Copier le numéro">
+                      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+                    </button>
+                  </div>
+                </div>
+
+                <!-- Languages & Mobility -->
+                <div class="contact-item">
+                  <div class="contact-item-left">
+                    <span class="contact-item-icon">
+                      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg>
+                    </span>
+                    <div>
+                      <div class="contact-item-label" data-i18n="contact_label_mobility">Langues & Mobilité</div>
+                      <div class="contact-item-val" data-i18n="contact_val_mobility">Français (maternelle) • Anglais courant • Mobile International</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Timezone Clock -->
+            <div class="timezone-clock-badge">
+              <div>
+                <span style="font-size: 0.75rem; text-transform: uppercase; color: var(--text-muted); font-weight: 700; display: block;" data-i18n="contact_tz_label">Fuseau Horaire :</span>
+                <span style="font-size: 0.9rem; font-weight: 600;">Afrique Centrale / Europe (UTC+1)</span>
+              </div>
+              <span class="tz-time" id="tz-clock">--:--:--</span>
+            </div>
+          </div>
+
+          <!-- Direct Form Panel -->
+          <div class="contact-form-panel">
+            <h3 style="margin-bottom: 8px;" data-i18n="contact_form_title">Envoyer un Message Direct</h3>
+            <p class="contact-form-intro" data-i18n="contact_form_intro">
+              Votre message sera transmis directement à <strong>philippe.nougoue@gmail.com</strong>.
+            </p>
+
+            <form id="contact-form">
+              <div class="form-group">
+                <label for="form-name" class="form-label" data-i18n="form_label_name">Nom & Prénom *</label>
+                <input type="text" id="form-name" class="form-input" placeholder="Ex: Jean Dupont" required>
+              </div>
+
+              <div class="form-group">
+                <label for="form-email" class="form-label" data-i18n="form_label_email">Email Professionnel *</label>
+                <input type="email" id="form-email" class="form-input" placeholder="Ex: direction@consortium-epc.com" required>
+              </div>
+
+              <div class="form-group">
+                <label for="form-subject" class="form-label" data-i18n="form_label_subject">Intitulé du Projet / Mandat</label>
+                <input type="text" id="form-subject" class="form-input" placeholder="Ex: Direction Project Controls — Mégaprojet Gaz / Énergie">
+              </div>
+
+              <div class="form-group">
+                <label for="form-message" class="form-label" data-i18n="form_label_message">Périmètre & Besoins de la Mission *</label>
+                <textarea id="form-message" class="form-textarea" placeholder="Précisez la taille du projet, la localisation, les outils exigés et les dates souhaitées d'intervention..." required></textarea>
+              </div>
+
+              <div class="form-actions-group">
+                <button type="submit" class="btn btn-primary" id="btn-submit-form" style="width: 100%;">
+                  <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <line x1="22" y1="2" x2="11" y2="13"></line>
+                    <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+                  </svg>
+                  <span data-i18n="btn_send">Envoyer à Philippe NOUGOUE (Gmail Web)</span>
+                </button>
+
+                <div class="form-secondary-actions">
+                  <button type="button" class="btn-secondary-action" id="btn-send-outlook" title="Rédiger avec Outlook Web">
+                    <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor">
+                      <path d="M19.5 3h-15C3.12 3 2 4.12 2 5.5v13C2 19.88 3.12 21 4.5 21h15c1.38 0 2.5-1.12 2.5-2.5v-13C22 4.12 20.88 3 19.5 3zm-7.5 9L4 7.25V5.5l8 4.75 8-4.75v1.75L12 12z"/>
+                    </svg>
+                    <span data-i18n="btn_opt_outlook">Outlook Web</span>
+                  </button>
+
+                  <button type="button" class="btn-secondary-action" id="btn-send-app" title="Ouvrir dans votre logiciel de messagerie (Outlook, Thunderbird, etc.)">
+                    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <rect x="2" y="4" width="20" height="16" rx="2"></rect>
+                      <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path>
+                    </svg>
+                    <span data-i18n="btn_opt_app">Logiciel Mail</span>
+                  </button>
+
+                  <button type="button" class="btn-secondary-action" id="btn-copy-form" title="Copier le message complet">
+                    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                      <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                    </svg>
+                    <span data-i18n="btn_opt_copy">Copier le message</span>
+                  </button>
+                </div>
+              </div>
+            </form>
+
+            <!-- Success Box (appears after submit) -->
+            <div id="contact-success-box" class="contact-success-box" style="display: none;">
+              <div class="contact-success-header">
+                <div class="contact-success-icon">✓</div>
+                <h4 class="contact-success-title" data-i18n="success_title">Message Prêt pour Philippe NOUGOUE</h4>
+              </div>
+              <p class="contact-success-desc" data-i18n="success_desc">
+                Votre interface de messagerie a été ouverte avec l'adresse <strong>philippe.nougoue@gmail.com</strong> en destinataire et vos éléments pré-remplis.
+              </p>
+              <div class="contact-success-links">
+                <a href="#" id="link-reopen-gmail" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-primary" data-i18n="btn_reopen_gmail">
+                  Réouvrir Gmail Web
+                </a>
+                <button type="button" id="btn-reset-form" class="btn btn-sm btn-secondary" data-i18n="btn_new_message">
+                  Rédiger un autre message
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- =========================================================================
+       10. PIED DE PAGE — MINIMALISTE SOMBRE AVEC BORDURE SUPÉRIEURE ARROUNDIE
+       ========================================================================= -->
+  <footer class="footer">
+    <div class="container footer-content">
+      <div>
+        <p data-i18n="footer_copy">© 2026 <strong>Philippe NOUGOUE</strong> • Senior Planning Engineer & Project Controls Manager.</p>
+        <p style="font-size: 0.8rem; margin-top: 4px; color: var(--text-muted);" data-i18n="footer_creds">PMP® n° 4125591 • Oracle Primavera P6 Certified Expert.</p>
+      </div>
+      <div style="display: flex; align-items: center; gap: 20px;">
+        <span class="footer-online-indicator">
+          <span class="status-pulse"></span>
+          <span data-i18n="footer_status">Disponible pour mission • En ligne</span>
+        </span>
+        <button class="btn btn-secondary btn-sm trigger-print-cv" title="Télécharger le CV au format PDF">
+          <span>Format PDF A4</span>
+        </button>
+      </div>
+    </div>
+  </footer>
+
+  <!-- =========================================================================
+       11. MODALE ÉTUDES DE CAS MÉGAPROJETS (BILINGUE DYNAMIQUE)
+       ========================================================================= -->
+  <div class="modal-overlay" id="project-modal" role="dialog" aria-modal="true">
+    <div class="modal-box">
+      <button class="modal-close-btn" id="modal-close-btn" aria-label="Fermer la modal">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <line x1="18" y1="6" x2="6" y2="18"></line>
+          <line x1="6" y1="6" x2="18" y2="18"></line>
+        </svg>
+      </button>
+      <div id="modal-body-content">
+        <!-- Contenu injecté dynamiquement par app.js -->
+      </div>
+    </div>
+  </div>
+
+  <!-- Toast Container -->
+  <div class="toast-container" id="toast-container"></div>
+
+  <!-- Scripts -->
+  <script src="js/background.js"></script>
+  <script src="js/evm-simulator.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>

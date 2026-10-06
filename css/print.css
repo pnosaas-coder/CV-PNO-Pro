@@ -1,0 +1,428 @@
+/* ==========================================================================
+   CV-PNO-PRO | PRINT STYLESHEET (A4 PDF EXPORT POUR PHILIPPE NOUGOUE)
+   Senior Planning Engineer & Project Controls Manager
+   ========================================================================== */
+
+@media print {
+  @page {
+    size: A4 portrait;
+    margin: 10mm 14mm 10mm 14mm;
+  }
+
+  /* Reset layout for high-definition paper print */
+  *, *::before, *::after {
+    background: transparent !important;
+    color: #111115 !important;
+    box-shadow: none !important;
+    text-shadow: none !important;
+    backdrop-filter: none !important;
+    -webkit-backdrop-filter: none !important;
+  }
+
+  body {
+    background-color: #ffffff !important;
+    font-size: 9.5pt;
+    line-height: 1.45;
+    color: #111115 !important;
+    font-family: 'Inter', Arial, sans-serif !important;
+  }
+
+  /* Hide interactive, non-printable elements */
+  #bg-canvas,
+  .noise-overlay,
+  .glow-orb,
+  .navbar-wrap,
+  .navbar-pill,
+  .ctrl-btn,
+  .btn,
+  .btn-whatsapp-hero,
+  .btn-whatsapp-contact,
+  .hamburger-btn,
+  .filter-tabs,
+  .evm-controls,
+  .evm-presets-row,
+  .contact-form-panel,
+  .modal-overlay,
+  .toast-container,
+  .footer,
+  .copy-btn,
+  .custom-range {
+    display: none !important;
+  }
+
+  /* Spacing */
+  section {
+    padding: 12px 0 !important;
+    page-break-inside: avoid;
+  }
+
+  .container {
+    max-width: 100% !important;
+    padding: 0 !important;
+  }
+
+  /* Print Header & Profile */
+  .hero-section {
+    padding-top: 0 !important;
+    padding-bottom: 14px !important;
+    border-bottom: 2pt solid #0F0F13;
+    margin-bottom: 14px;
+  }
+
+  .hero-grid {
+    display: flex !important;
+    flex-direction: row !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+    gap: 20px !important;
+  }
+
+  .hero-visual {
+    order: 2 !important;
+  }
+
+  .profile-card {
+    max-width: 105px !important;
+    padding: 2px !important;
+    border: 1pt solid #cbd5e1 !important;
+    border-radius: 6px !important;
+  }
+
+  .profile-img-wrap {
+    aspect-ratio: 1/1 !important;
+    border-radius: 4px !important;
+    border: none !important;
+  }
+
+  .profile-floating-badge {
+    display: none !important;
+  }
+
+  .hero-title-name {
+    font-size: 20pt !important;
+    color: #0F0F13 !important;
+    font-weight: 800 !important;
+    margin-bottom: 2px !important;
+  }
+
+  .hero-subtitle-dramatic {
+    font-size: 11.5pt !important;
+    color: #8F691A !important;
+    font-style: italic !important;
+    margin-bottom: 6px !important;
+  }
+
+  .hero-summary {
+    font-size: 9pt !important;
+    color: #2D2D35 !important;
+    margin-bottom: 10px !important;
+    max-width: 100% !important;
+    line-height: 1.4 !important;
+  }
+
+  .hero-stats-grid {
+    display: grid !important;
+    grid-template-columns: repeat(4, 1fr) !important;
+    gap: 8px !important;
+    padding-top: 8px !important;
+    border-top: 1pt solid #e2e8f0 !important;
+  }
+
+  .stat-value {
+    font-size: 12pt !important;
+    color: #0F0F13 !important;
+  }
+
+  .stat-label {
+    font-size: 7pt !important;
+    color: #64748b !important;
+  }
+
+  /* Section Titles */
+  .section-header {
+    text-align: left !important;
+    margin-bottom: 10px !important;
+  }
+
+  .section-tag {
+    display: none !important;
+  }
+
+  .section-title {
+    font-size: 13pt !important;
+    color: #0F0F13 !important;
+    border-bottom: 1.5pt solid #8F691A;
+    padding-bottom: 3px;
+    margin-bottom: 6px;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+
+  .section-desc {
+    font-size: 8.5pt !important;
+    color: #64748b !important;
+    margin-bottom: 8px !important;
+  }
+
+  /* About Manifesto */
+  .about-section {
+    background: transparent !important;
+    border: none !important;
+    padding: 8px 0 !important;
+  }
+
+  .about-grid {
+    display: block !important;
+  }
+
+  .about-left-title, .about-divider-line {
+    display: none !important;
+  }
+
+  .about-manifesto-text {
+    font-size: 8.8pt !important;
+    line-height: 1.45 !important;
+  }
+
+  /* Timeline for Print */
+  .timeline::before {
+    display: none !important;
+  }
+
+  .timeline-dot {
+    display: none !important;
+  }
+
+  .timeline-item {
+    padding-left: 0 !important;
+    margin-bottom: 12px !important;
+    page-break-inside: avoid;
+  }
+
+  .experience-card {
+    border: 1pt solid #e2e8f0 !important;
+    border-radius: 4px !important;
+    padding: 10px 12px !important;
+    background: #f8fafc !important;
+  }
+
+  .exp-role {
+    font-size: 10.5pt !important;
+    color: #0F0F13 !important;
+  }
+
+  .exp-company {
+    font-size: 9pt !important;
+    color: #8F691A !important;
+  }
+
+  .exp-period, .exp-budget {
+    font-size: 7.5pt !important;
+    border: 1pt solid #cbd5e1 !important;
+    padding: 2px 6px !important;
+  }
+
+  .exp-desc {
+    font-size: 8.5pt !important;
+    margin-bottom: 6px !important;
+    line-height: 1.4 !important;
+  }
+
+  .exp-highlights-title {
+    font-size: 7.8pt !important;
+    margin-bottom: 4px !important;
+  }
+
+  .exp-highlights-list li {
+    font-size: 8pt !important;
+    color: #334155 !important;
+    line-height: 1.35 !important;
+  }
+
+  .exp-tools-row {
+    padding-top: 4px !important;
+  }
+
+  .tool-tag {
+    font-size: 7pt !important;
+    border: 1pt solid #e2e8f0 !important;
+    padding: 1px 5px !important;
+  }
+
+  /* Skills for Print */
+  .skills-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 10px !important;
+  }
+
+  .skill-category-card {
+    border: 1pt solid #e2e8f0 !important;
+    padding: 10px !important;
+    border-radius: 4px !important;
+    page-break-inside: avoid;
+  }
+
+  .skill-cat-title {
+    font-size: 9.5pt !important;
+  }
+
+  .skill-name {
+    font-size: 8pt !important;
+  }
+
+  .progress-track {
+    height: 4px !important;
+    border: 1pt solid #cbd5e1 !important;
+  }
+
+  .progress-bar {
+    background: #8F691A !important;
+  }
+
+  /* Projects Grid for Print */
+  .projects-grid {
+    grid-template-columns: repeat(3, 1fr) !important;
+    gap: 8px !important;
+  }
+
+  .project-card {
+    border: 1pt solid #e2e8f0 !important;
+    border-radius: 4px !important;
+    page-break-inside: avoid;
+  }
+
+  .project-header-bar {
+    padding: 8px 10px !important;
+  }
+
+  .project-body {
+    padding: 10px !important;
+  }
+
+  .project-title {
+    font-size: 9pt !important;
+  }
+
+  .project-desc {
+    font-size: 7.8pt !important;
+    line-height: 1.3 !important;
+  }
+
+  .p-kpi-val {
+    font-size: 8.5pt !important;
+  }
+
+  /* Education Grid for Print */
+  .edu-grid {
+    display: grid !important;
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 8px !important;
+    margin-bottom: 10px !important;
+  }
+
+  .edu-card {
+    border: 1pt solid #e2e8f0 !important;
+    padding: 8px 10px !important;
+    border-radius: 4px !important;
+    page-break-inside: avoid;
+  }
+
+  .edu-year-badge {
+    font-size: 7.5pt !important;
+    padding: 1px 5px !important;
+    border: 1pt solid #cbd5e1 !important;
+  }
+
+  .edu-degree {
+    font-size: 8.8pt !important;
+    margin: 2px 0 !important;
+  }
+
+  .edu-institution {
+    font-size: 7.8pt !important;
+  }
+
+  /* Certifications */
+  .cert-grid {
+    display: grid !important;
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 8px !important;
+    margin-bottom: 10px !important;
+  }
+
+  .cert-card {
+    border: 1pt solid #e2e8f0 !important;
+    padding: 8px 10px !important;
+    border-radius: 4px !important;
+    page-break-inside: avoid;
+  }
+
+  .cert-name {
+    font-size: 8.8pt !important;
+  }
+
+  .cert-issuer {
+    font-size: 7.8pt !important;
+  }
+
+  /* Leadership & Languages for Print */
+  .leadership-grid {
+    display: grid !important;
+    grid-template-columns: 1.2fr 0.8fr !important;
+    gap: 10px !important;
+    page-break-inside: avoid;
+  }
+
+  .leadership-card {
+    border: 1pt solid #e2e8f0 !important;
+    padding: 10px !important;
+    border-radius: 4px !important;
+  }
+
+  .leadership-list li {
+    font-size: 8pt !important;
+    line-height: 1.35 !important;
+  }
+
+  .language-item-box {
+    border: 1pt solid #e2e8f0 !important;
+    padding: 6px 10px !important;
+    margin-top: 6px !important;
+  }
+
+  .lang-name {
+    font-size: 8.8pt !important;
+  }
+
+  .lang-desc {
+    font-size: 7.5pt !important;
+  }
+
+  .lang-level-badge {
+    font-size: 7.5pt !important;
+    border: 1pt solid #cbd5e1 !important;
+  }
+
+  /* Contact info bar */
+  .contact-info-panel {
+    border: 1pt solid #e2e8f0 !important;
+    padding: 10px !important;
+    border-radius: 4px !important;
+  }
+
+  .contact-detail-list {
+    display: grid !important;
+    grid-template-columns: repeat(3, 1fr) !important;
+    gap: 8px !important;
+    margin: 6px 0 !important;
+  }
+
+  .contact-item {
+    border: 1pt solid #e2e8f0 !important;
+    padding: 4px 8px !important;
+  }
+
+  .contact-item-val {
+    font-size: 7.8pt !important;
+  }
+}

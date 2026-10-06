@@ -1,0 +1,282 @@
+/* ==========================================================================
+   CV-PNO-PRO | PRESET B : NOCTURNE PRESTIGE (SOMBRE & RAFFINÉ)
+   Philippe NOUGOUE — Senior Planning Engineer & Project Controls Manager
+   ========================================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;0,700;1,400;1,600;1,700&family=JetBrains+Mono:wght@400;500;600;700&display=swap');
+
+:root {
+  /* Preset B — Nocturne Prestige Palette */
+  --bg-primary: #0F0F13;       /* Charbon profond */
+  --bg-secondary: #16161D;     /* Ardoise sombre */
+  --bg-tertiary: #1E1E26;      /* Ardoise neutre */
+  --bg-surface: rgba(30, 30, 38, 0.7);
+  --bg-surface-hover: rgba(38, 38, 48, 0.9);
+  --bg-glass: rgba(15, 15, 19, 0.85);
+  --bg-glass-card: rgba(22, 22, 29, 0.8);
+
+  --accent-gold: #D4A843;      /* Or prestige */
+  --accent-gold-light: #F3D27E;
+  --accent-gold-dark: #A37E28;
+  --accent-gradient: linear-gradient(135deg, #F3D27E 0%, #D4A843 50%, #A37E28 100%);
+  --accent-glow: 0 0 30px rgba(212, 168, 67, 0.28);
+  --border-accent: rgba(212, 168, 67, 0.35);
+  --border-focus: #D4A843;
+
+  --border-subtle: rgba(255, 255, 255, 0.08);
+
+  --text-primary: #F5F3EE;      /* Crème noble */
+  --text-secondary: #A5A5B2;    /* Gris argent */
+  --text-muted: #6E6E7C;
+  --text-accent: #D4A843;
+
+  /* Status Colors */
+  --status-success: #10B981;
+  --status-warning: #F59E0B;
+  --status-danger: #EF4444;
+  --status-info: #3B82F6;
+
+  /* Typography */
+  --font-heading: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-dramatic: 'Playfair Display', Georgia, serif;
+  --font-body: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+
+  /* Dimensions & Radius (rounded-2rem à rounded-3rem) */
+  --header-height: 80px;
+  --max-width: 1220px;
+  --radius-sm: 8px;
+  --radius-md: 16px;
+  --radius-lg: 28px;            /* rounded-2rem */
+  --radius-xl: 40px;            /* rounded-3rem */
+  --radius-full: 9999px;
+
+  /* Shadows */
+  --shadow-sm: 0 4px 14px rgba(0, 0, 0, 0.4);
+  --shadow-md: 0 10px 30px rgba(0, 0, 0, 0.55);
+  --shadow-lg: 0 20px 60px rgba(0, 0, 0, 0.7);
+  --shadow-gold: 0 10px 35px rgba(212, 168, 67, 0.22);
+
+  --transition-fast: 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  --transition-normal: 0.35s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+/* Light Theme Transition */
+[data-theme="light"] {
+  --bg-primary: #F5F3EE;       /* Crème douce */
+  --bg-secondary: #ECE8E0;
+  --bg-tertiary: #E0DBD0;
+  --bg-surface: rgba(255, 255, 255, 0.85);
+  --bg-surface-hover: rgba(255, 255, 255, 1);
+  --bg-glass: rgba(245, 243, 238, 0.9);
+  --bg-glass-card: rgba(255, 255, 255, 0.92);
+
+  --accent-gold: #B88B2A;
+  --accent-gold-light: #D4A843;
+  --accent-gold-dark: #8F691A;
+  --accent-gradient: linear-gradient(135deg, #D4A843 0%, #B88B2A 100%);
+  --accent-glow: 0 0 25px rgba(184, 139, 42, 0.2);
+  --border-accent: rgba(184, 139, 42, 0.35);
+  --border-focus: #B88B2A;
+
+  --border-subtle: rgba(15, 15, 19, 0.1);
+
+  --text-primary: #0F0F13;
+  --text-secondary: #4A4A55;
+  --text-muted: #727280;
+  --text-accent: #B88B2A;
+
+  --shadow-sm: 0 4px 14px rgba(15, 15, 19, 0.05);
+  --shadow-md: 0 10px 30px rgba(15, 15, 19, 0.08);
+  --shadow-lg: 0 20px 50px rgba(15, 15, 19, 0.12);
+  --shadow-gold: 0 8px 30px rgba(184, 139, 42, 0.15);
+}
+
+/* Base Reset */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
+  scroll-padding-top: calc(var(--header-height) + 20px);
+}
+
+body {
+  font-family: var(--font-body);
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  line-height: 1.65;
+  overflow-x: hidden;
+  transition: background-color var(--transition-normal), color var(--transition-normal);
+  position: relative;
+  min-height: 100vh;
+}
+
+/* SVG Inline Texture Noise Overlay (feTurbulence) */
+.noise-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  pointer-events: none;
+  z-index: 99;
+  opacity: 0.045;
+}
+
+/* Background Animated Canvas */
+#bg-canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  pointer-events: none;
+  z-index: 0;
+  opacity: 0.45;
+}
+
+/* Ambient Radial Glows */
+.glow-orb {
+  position: fixed;
+  border-radius: 50%;
+  filter: blur(140px);
+  pointer-events: none;
+  z-index: 0;
+  opacity: 0.2;
+}
+
+.glow-orb-1 {
+  top: -80px;
+  right: -80px;
+  width: 580px;
+  height: 580px;
+  background: radial-gradient(circle, #D4A843 0%, rgba(212, 168, 67, 0) 70%);
+}
+
+.glow-orb-2 {
+  bottom: 12%;
+  left: -120px;
+  width: 620px;
+  height: 620px;
+  background: radial-gradient(circle, #8F691A 0%, rgba(143, 105, 26, 0) 70%);
+}
+
+/* Typography Hierarchy */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+  color: var(--text-primary);
+  font-weight: 700;
+  letter-spacing: -0.025em;
+  line-height: 1.25;
+}
+
+.serif-dramatic {
+  font-family: var(--font-dramatic);
+  font-style: italic;
+  font-weight: 400;
+}
+
+h1 {
+  font-size: clamp(2.5rem, 5.5vw, 4.2rem);
+  letter-spacing: -0.035em;
+}
+
+h2 {
+  font-size: clamp(1.9rem, 3.8vw, 2.7rem);
+}
+
+h3 {
+  font-size: clamp(1.25rem, 2.2vw, 1.65rem);
+}
+
+p {
+  color: var(--text-secondary);
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+  transition: all var(--transition-fast);
+}
+
+/* Container */
+.container {
+  width: 100%;
+  max-width: var(--max-width);
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 24px;
+  padding-right: 24px;
+  position: relative;
+  z-index: 1;
+}
+
+section {
+  padding: 110px 0;
+  position: relative;
+  z-index: 1;
+}
+
+@media (max-width: 768px) {
+  section {
+    padding: 70px 0;
+  }
+}
+
+/* Section Header */
+.section-header {
+  text-align: center;
+  max-width: 780px;
+  margin: 0 auto 60px auto;
+}
+
+.section-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 16px;
+  border-radius: var(--radius-full);
+  background: rgba(212, 168, 67, 0.12);
+  border: 1px solid var(--border-accent);
+  color: var(--text-accent);
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.09em;
+  margin-bottom: 18px;
+}
+
+.section-title {
+  margin-bottom: 16px;
+}
+
+.section-desc {
+  font-size: 1.05rem;
+  color: var(--text-secondary);
+  line-height: 1.7;
+}
+
+/* Gold Gradient Text */
+.gold-gradient-text {
+  background: var(--accent-gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: inline-block;
+}
+
+/* Monospace Badge */
+.mono-badge {
+  font-family: var(--font-mono);
+  font-size: 0.82rem;
+  padding: 5px 12px;
+  border-radius: var(--radius-sm);
+  background: var(--bg-tertiary);
+  border: 1px solid var(--border-subtle);
+  color: var(--accent-gold);
+}
