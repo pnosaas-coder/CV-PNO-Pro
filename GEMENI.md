@@ -46,16 +46,31 @@ Site web de CV en ligne et portfolio exécutif haute performance, conçu sur-mes
      * **Français** : Langue maternelle
      * **Anglais** : Professionnel courant / Bilingue (pratique quotidienne en consortiums internationaux depuis 2006 : GE Vernova, MODEC Japon, Foster Wheeler UK/USA).
 
-6. **Parcours Mégaprojets (CAPEX > $8 Md USD)** :
-   - GE Vernova — Centrale Nachtigal EPCC (420 MW) : $1,2 Md USD
-   - TotalEnergies — Portefeuille Offshore Congo (4 Packages) : $1,5 Md+ USD
-   - Perenco — Pipeline EPC 100 km : $600 M USD
-   - TotalEnergies — Redéveloppement Centrale Anguille Gabon : $2,5 Md USD
-   - Foster Wheeler / SONARA — Arrêt Technique Raffinerie : $600 M USD
-   - ORSAM / MODEC Japon — Commissioning FPSO MV21 Kwame Nkrumah : $250 M USD
-   - Prunus Engineering — Appel d'offres ferroviaire 512,7 km rails UIC 54 (~40 M USD)
+6. **Parcours Mégaprojets (CAPEX > $8 Md USD — Cumul 20 ans)** :
+   - *Mention déontologique d'entretien* : « CAPEX des projets ; périmètre de responsabilité détaillé sur demande. »
+   - **GE Vernova — Centrale Nachtigal EPCC (420 MW)** : $1,2 Md USD | SPI cumulé 0,93 et CPI 0,98 | +49 jours d’EOT substantiés sous FIDIC 8.4/8.5/20.1 et SCL Protocol | Baseline contractuelle de 3 427 016 heures-homme et ~12 000 activités.
+   - **TotalEnergies — Portefeuille Offshore Congo (4 Lots)** : $1,5 Md+ USD | Moins de 3 % de dérive planning sur les 4 packages simultanés (ALIMA, NKOSSA, SENDJI, DJENO).
+   - **Perenco — Pipeline EPC 100 km** : $600 M USD | Conformité HSE maintenue au-dessus de 98 % sur 33 mois de pose de canalisation sous pression.
+   - **TotalEnergies — Redéveloppement Centrale Anguille Gabon** : $2,5 Md USD | Mégaprojet brownfield avec tie-ins critiques sans incident réseau.
+   - **Foster Wheeler / SONARA — Arrêt Technique Raffinerie** : $600 M USD | Ordonnancement horaire 24/7 en arrêt d'unité (TAR).
+   - **ORSAM / MODEC Japon — Commissioning FPSO MV21 Kwame Nkrumah** : $250 M USD | Jalon First Oil atteint en haute sûreté offshore.
+   - **Prunus Engineering — Appel d'offres ferroviaire 512,7 km rails UIC 54** (~40 M USD)
 
-7. **Simulateur Live EVM (Earned Value Management) & Courbe en S** :
+7. **Matrice de Compétences sans Pourcentages Arbitraires** :
+   - Suppression des barres de progression et des pourcentages subjectifs (ex: 95%).
+   - Remplacement par des niveaux nommés et l'ancienneté d'expérience :
+     * **Oracle Primavera P6** : Certifié Expert • 15+ ans
+     * **Analyse du Chemin Critique (CPM)** : Niveau Maître • 20 ans
+     * **Planning Directeur Intégré (IMS)** : Lead Mégaprojets • 15+ ans
+     * **Power BI** : Opérationnel
+     * **Excel BI (Power Query, DAX)** : Opérationnel Avancé • 15+ ans
+     * **Méthodologie PMBOK** : Certifié PMP® (PMI n° 4125591)
+
+8. **Téléchargement Direct des CV en Pièce Jointe (PDF Haute Résolution)** :
+   - **Bouton Français** : Téléchargement direct du fichier `CV_Philippe_NOUGOUE_FR.pdf` (issu du CV Master FR officiel).
+   - **Bouton Anglais** : Téléchargement direct du fichier `CV_Philippe_NOUGOUE_EN.pdf` (issu du CV Master EN officiel).
+
+9. **Simulateur Live EVM (Earned Value Management) & Courbe en S** :
    - Moteur en temps réel : calcul de SPI, CPI, SV, CV, EAC, TCPI et rendu vectoriel SVG de la courbe en S avec Data Date.
 
 ---
@@ -66,17 +81,22 @@ Site web de CV en ligne et portfolio exécutif haute performance, conçu sur-mes
 CV-PNO-Pro/
 ├── index.html            # Structure HTML5 bilingue complète avec data-i18n
 ├── assets/
-│   └── profile.jpg       # Portrait exécutif officiel de Philippe NOUGOUE (cercle or, costume 3 pièces)
+│   ├── profile.jpg       # Portrait exécutif officiel de Philippe NOUGOUE
+│   └── cv/
+│       ├── CV_Philippe_NOUGOUE_FR.pdf   # CV officiel en français (pièce jointe PDF)
+│       ├── CV_Philippe_NOUGOUE_EN.pdf   # Resume officiel en anglais (pièce jointe PDF)
+│       ├── CV_Philippe_NOUGOUE_FR.docx  # Source DOCX Master FR
+│       └── CV_Philippe_NOUGOUE_EN.docx  # Source DOCX Master EN
 ├── css/
 │   ├── style.css         # Palette Preset B Nocturne Prestige & texture SVG
-│   ├── components.css    # Composants (navbar, médaillon or, boutons WhatsApp, simulateur EVM)
+│   ├── components.css    # Composants (badges de niveaux, boutons CV FR/EN, simulateur EVM)
 │   └── print.css         # Rendu pour impression papier et export PDF A4 (FR ou EN)
 ├── js/
 │   ├── background.js     # Simulation réseau CPM sur Canvas
 │   ├── evm-simulator.js  # Moteur de calcul EVM & Courbe en S vectorielle
-│   └── app.js            # Dictionnaire bilingue FR/EN intégral, thème, modale & contact
-├── CV-PNO-Pro-Web.zip    # Archive prête pour le déploiement web immédiat (Netlify / Vercel / GitHub)
-└── GEMENI.md             # Documentation et référence du projet
+│   └── app.js            # Dictionnaire bilingue FR/EN, switch CV FR/EN, modale & contact
+├── README.md             # Présentation et documentation du projet
+└── GEMENI.md             # Spécifications détaillées et guide de maintenance
 ```
 
 ---

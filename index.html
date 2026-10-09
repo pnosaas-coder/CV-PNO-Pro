@@ -90,15 +90,15 @@
           </svg>
         </button>
 
-        <!-- Download CV / Print Button -->
-        <button class="btn btn-primary btn-sm trigger-print-cv" title="Télécharger ou imprimer le CV au format PDF A4">
+        <!-- Download CV Action (Adaptive & Direct Link to attached CV) -->
+        <a href="assets/cv/CV_Philippe_NOUGOUE_FR.pdf" download="CV_Philippe_NOUGOUE_FR.pdf" class="btn btn-primary btn-sm nav-download-btn" id="nav-download-cv" target="_blank" title="Télécharger le CV au format PDF">
           <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
             <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
             <polyline points="7 10 12 15 17 10"></polyline>
             <line x1="12" y1="15" x2="12" y2="3"></line>
           </svg>
           <span data-i18n="nav_download_cv">Télécharger CV</span>
-        </button>
+        </a>
 
         <!-- Mobile Menu Hamburger -->
         <button class="ctrl-btn hamburger-btn" id="hamburger-btn" aria-label="Menu Mobile">
@@ -122,7 +122,7 @@
           <div class="hero-badge-row">
             <div class="status-badge">
               <span class="status-pulse"></span>
-              <span data-i18n="status_badge">DISPONIBLE IMMÉDIATEMENT • CAPEX > $8 Md</span>
+              <span data-i18n="status_badge">DISPONIBLE IMMÉDIATEMENT • CAPEX > $8 Md (CUMUL 20 ANS)</span>
             </div>
             <span class="mono-badge">PMP® n° 4125591</span>
             <span class="mono-badge">Primavera P6 Expert</span>
@@ -138,14 +138,22 @@
           </p>
 
           <div class="hero-cta-group">
-            <button class="btn btn-primary trigger-print-cv">
+            <a href="assets/cv/CV_Philippe_NOUGOUE_FR.pdf" download="CV_Philippe_NOUGOUE_FR.pdf" class="btn btn-primary hero-btn-cv hero-btn-cv-fr" id="hero-download-fr" target="_blank" title="Télécharger le CV en Français (PDF)">
               <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                 <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
                 <polyline points="7 10 12 15 17 10"></polyline>
                 <line x1="12" y1="15" x2="12" y2="3"></line>
               </svg>
-              <span data-i18n="hero_btn_download">Télécharger mon CV (PDF)</span>
-            </button>
+              <span data-i18n="hero_btn_download_fr">Télécharger CV (Français)</span>
+            </a>
+            <a href="assets/cv/CV_Philippe_NOUGOUE_EN.pdf" download="CV_Philippe_NOUGOUE_EN.pdf" class="btn btn-secondary hero-btn-cv hero-btn-cv-en" id="hero-download-en" target="_blank" title="Download Resume in English (PDF)">
+              <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                <polyline points="7 10 12 15 17 10"></polyline>
+                <line x1="12" y1="15" x2="12" y2="3"></line>
+              </svg>
+              <span data-i18n="hero_btn_download_en">Download CV (English)</span>
+            </a>
             <a href="https://wa.me/237677481161?text=Bonjour%20M.%20Philippe%20NOUGOUE%2C%20je%20souhaite%20échanger%20avec%20vous%20concernant%20un%20projet." target="_blank" rel="noopener noreferrer" class="btn-whatsapp-hero" title="Échanger directement sur WhatsApp">
               <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
                 <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/>
@@ -177,7 +185,7 @@
             </div>
             <div class="stat-item">
               <span class="stat-value">&gt; $8 Md</span>
-              <span class="stat-label" data-i18n="stat_portfolio">Portefeuille Piloté</span>
+              <span class="stat-label" data-i18n="stat_portfolio">Portefeuille Piloté (Cumul 20 ans)*</span>
             </div>
             <div class="stat-item">
               <span class="stat-value">$2.5 Md</span>
@@ -188,6 +196,7 @@
               <span class="stat-label" data-i18n="stat_ims">Activités IMS / P6</span>
             </div>
           </div>
+          <p class="stat-discreet-note" data-i18n="hero_stat_note">* CAPEX des projets globaux ; périmètre de responsabilité détaillé sur demande.</p>
         </div>
 
         <!-- Executive Visual Profile Card -->
@@ -230,10 +239,10 @@
 
           <div class="about-manifesto-text">
             <p data-i18n="about_p1">
-              Senior Planning & Project Controls Manager disposant de <strong class="about-manifesto-highlight">20+ ans d'expérience</strong> dans le pilotage de la gouvernance planning, coûts, risques et reporting sur des mégaprojets <strong>EPC / EPCC / EPCM</strong> dans les secteurs Énergie, Oil & Gas, Hydroélectrique, Raffinerie, Pipeline et Offshore — avec un portefeuille CAPEX supérieur à <strong class="about-manifesto-highlight">8 milliards USD</strong>.
+              Senior Planning & Project Controls Manager disposant de <strong class="about-manifesto-highlight">20+ ans d'expérience</strong> dans le pilotage de la gouvernance planning, coûts, risques et reporting sur des mégaprojets <strong>EPC / EPCC / EPCM</strong> dans les secteurs Énergie, Oil & Gas, Hydroélectrique, Raffinerie, Pipeline et Offshore — avec un portefeuille cumulé sur vingt ans supérieur à <strong class="about-manifesto-highlight">8 milliards USD</strong> (CAPEX des projets globaux ; périmètre de responsabilité détaillé sur demande).
             </p>
             <p style="margin-top: 16px;" data-i18n="about_p2">
-              Certifié <strong>PMP® (n° 4125591)</strong> et <strong>Oracle Primavera P6 (Expert, 15+ ans)</strong>. Expérience confirmée de pilotage du Planning Directeur Intégré (IMS) sur des programmes allant jusqu'à <strong>~12 000 activités</strong>, d'encadrement d'équipes Project Controls pluridisciplinaires, de mise en œuvre de la gouvernance <strong>Earned Value Management (EVM)</strong>, de pilotage des prévisions de délais et de coûts, et de production d'analyses exécutives via tableaux de bord <strong>Power BI</strong>.
+              Certifié <strong>PMP® (n° 4125591)</strong> et <strong>Oracle Primavera P6 (Expert, 15+ ans)</strong>. Expérience confirmée de pilotage du Planning Directeur Intégré (IMS) sur des programmes allant jusqu'à <strong>~12 000 activités</strong> et <strong>3,4 M heures-homme</strong>, d'encadrement d'équipes Project Controls pluridisciplinaires, de mise en œuvre de la gouvernance <strong>Earned Value Management (EVM)</strong>, de pilotage des prévisions de délais et de coûts, et de production d'analyses exécutives via tableaux de bord <strong>Power BI</strong>.
             </p>
             <p style="margin-top: 16px;" data-i18n="about_p3">
               Expertise reconnue en analyse du chemin critique (CPM), gouvernance qualité planning <strong>DCMA-14</strong>, analyse de risque probabiliste (QSRA), <strong>Time Impact Analysis (TIA)</strong>, dossiers de prolongation de délai (EOT) et substantiation des réclamations sous cadre <strong>FIDIC</strong> et <strong>SCL Delay & Disruption Protocol</strong>. Conseiller de confiance des Directeurs de Projet sur mégaprojets greenfield et brownfield, onshore et offshore. Français langue maternelle, anglais professionnel courant.
@@ -283,7 +292,7 @@
               <div class="exp-meta-row">
                 <div class="exp-meta-item"><span class="mono-badge">Greenfield EPCC</span></div>
                 <div class="exp-meta-item"><span>Lot EM1 Électromécanique • Consortium GE Vernova (Leader) & Elecnor</span></div>
-                <div class="exp-meta-item"><span class="mono-badge">IMS ~12 000 Activités</span></div>
+                <div class="exp-meta-item"><span class="mono-badge">IMS ~12 000 Activités • 3,4M h-h</span></div>
               </div>
 
               <p class="exp-desc">
@@ -292,10 +301,10 @@
 
               <div class="exp-highlights-title" data-i18n="exp_highlights_label">Responsabilités & Réalisations Clés :</div>
               <ul class="exp-highlights-list">
-                <li>Gouvernance Earned Value Management (EVM) hebdomadaire et mensuelle : calcul rigoureux du SPI/CPI, suivi des courbes en S et prévisions fiables d'atterrissage (EAC / ETC / VAC).</li>
-                <li>Production et présentation des rapports exécutifs pour le comité de pilotage NHPC / prêteurs internationaux via tableaux de bord Power BI.</li>
-                <li>Instruction et substantiation des dossiers de prolongation de délai (EOT / Claims) par la méthodologie Time Impact Analysis (TIA) sous contrat FIDIC.</li>
-                <li>Audits qualité planning selon le référentiel DCMA-14 et simulations probabilistes de risques (QSRA) sous Primavera Risk Analysis.</li>
+                <li>Gouvernance Earned Value Management (EVM) rigoureuse : <strong>SPI cumulé de 0,93</strong> et <strong>CPI de 0,98</strong> sur le lot EM1 avec plans de rattrapage structurés sur le chemin critique commissioning.</li>
+                <li>Instruction et substantiation victorieuse d'une demande d'<strong>Extension of Time (EOT) de 49 jours calendaires</strong> par Time Impact Analysis (TIA) sous clauses FIDIC 8.4/8.5/20.1 et SCL Delay Protocol.</li>
+                <li>Élaboration et contrôle de la Baseline contractuelle de référence de <strong>3 427 016 heures-homme</strong> et <strong>environ 12 000 activités</strong> sous Primavera P6.</li>
+                <li>Production et présentation des rapports exécutifs pour le comité de pilotage NHPC et les prêteurs internationaux via tableaux de bord Power BI.</li>
               </ul>
 
               <div class="exp-tools-row">
@@ -335,9 +344,9 @@
 
               <div class="exp-highlights-title" data-i18n="exp_highlights_label">Responsabilités & Réalisations Clés :</div>
               <ul class="exp-highlights-list">
-                <li>Consolidation d'un planning maître intégré multi-sites sous Primavera P6, synchronisant les campagnes maritimes et logistiques.</li>
+                <li>Performance globale : maintien de <strong>moins de 3 % de dérive planning</strong> sur l'ensemble des quatre lots offshore simultanés (ALIMA, NKOSSA, SENDJI, DJENO) sur un portefeuille de 1,5 Md USD+.</li>
+                <li>Consolidation d'un planning maître intégré multi-sites sous Primavera P6, synchronisant les campagnes maritimes et logistiques sans blocage d'interface.</li>
                 <li>Mise en œuvre d'une gouvernance Project Controls standardisée entre les différents contractors et la direction de filiale TotalEnergies.</li>
-                <li>Reporting mensuel d'avancement (MPR) et analyse d'impact des dérives sur le chemin critique des puits et des installations de surface.</li>
               </ul>
 
               <div class="exp-tools-row">
@@ -376,9 +385,9 @@
 
               <div class="exp-highlights-title" data-i18n="exp_highlights_label">Responsabilités & Réalisations Clés :</div>
               <ul class="exp-highlights-list">
+                <li>Livraison du pipeline EPC de 100 km dans les délais contractuels sur 33 mois, avec une <strong>conformité HSE maintenue au-dessus de 98 %</strong>.</li>
                 <li>Création du Baseline Niveau 4 (ingénierie, approvisionnement tuyauterie, tirage et pose sous-marine, tests hydrostatiques).</li>
-                <li>Contrôle rigoureux des cadences de pose et d'ensouillage avec prévisions d'atterrissage hebdomadaires.</li>
-                <li>Traitement proactif des demandes de modification contractuelle (Change Orders) et respect de la fenêtre de mise en gaz.</li>
+                <li>Contrôle rigoureux des cadences de pose et d'ensouillage avec prévisions d'atterrissage hebdomadaires et gestion proactive des Change Orders.</li>
               </ul>
 
               <div class="exp-tools-row">
@@ -679,24 +688,24 @@
             </div>
             <div class="skill-item-list">
               <div class="skill-item">
-                <div class="skill-meta"><span class="skill-name">Oracle Primavera P6 / P6 EPPM</span><span class="skill-level-text">99%</span></div>
-                <div class="progress-track"><div class="progress-bar" style="width: 99%;"></div></div>
+                <div class="skill-meta"><span class="skill-name">Oracle Primavera P6 / P6 EPPM</span></div>
+                <span class="skill-badge-level" data-i18n="skill_lvl_p6">Certifié Expert • 15+ ans</span>
               </div>
               <div class="skill-item">
-                <div class="skill-meta"><span class="skill-name">Analyse du Chemin Critique (CPM)</span><span class="skill-level-text">98%</span></div>
-                <div class="progress-track"><div class="progress-bar" style="width: 98%;"></div></div>
+                <div class="skill-meta"><span class="skill-name">Analyse du Chemin Critique (CPM)</span></div>
+                <span class="skill-badge-level" data-i18n="skill_lvl_cpm">Niveau Maître • 20 ans</span>
               </div>
               <div class="skill-item">
-                <div class="skill-meta"><span class="skill-name">Planning Directeur Intégré (IMS ~12k)</span><span class="skill-level-text">97%</span></div>
-                <div class="progress-track"><div class="progress-bar" style="width: 97%;"></div></div>
+                <div class="skill-meta"><span class="skill-name">Planning Directeur Intégré (IMS ~12k)</span></div>
+                <span class="skill-badge-level" data-i18n="skill_lvl_ims">Lead Mégaprojets • 15+ ans</span>
               </div>
               <div class="skill-item">
-                <div class="skill-meta"><span class="skill-name">Acumen Fuse & Qualité DCMA-14</span><span class="skill-level-text">94%</span></div>
-                <div class="progress-track"><div class="progress-bar" style="width: 94%;"></div></div>
+                <div class="skill-meta"><span class="skill-name">Acumen Fuse & Qualité DCMA-14</span></div>
+                <span class="skill-badge-level" data-i18n="skill_lvl_dcma">Audit Qualité & Conformité</span>
               </div>
               <div class="skill-item">
-                <div class="skill-meta"><span class="skill-name">Primavera Risk Analysis (QSRA Monte Carlo)</span><span class="skill-level-text">90%</span></div>
-                <div class="progress-track"><div class="progress-bar" style="width: 90%;"></div></div>
+                <div class="skill-meta"><span class="skill-name">Primavera Risk Analysis (QSRA Monte Carlo)</span></div>
+                <span class="skill-badge-level" data-i18n="skill_lvl_qsra">Opérationnel Avancé • 10+ ans</span>
               </div>
             </div>
           </div>
@@ -718,24 +727,24 @@
             </div>
             <div class="skill-item-list">
               <div class="skill-item">
-                <div class="skill-meta"><span class="skill-name">Earned Value Management (SPI, CPI, BCWS/BCWP)</span><span class="skill-level-text">98%</span></div>
-                <div class="progress-track"><div class="progress-bar" style="width: 98%;"></div></div>
+                <div class="skill-meta"><span class="skill-name">Earned Value Management (SPI, CPI, BCWS/BCWP)</span></div>
+                <span class="skill-badge-level" data-i18n="skill_lvl_evm">Autorité Méthodologique • 15+ ans</span>
               </div>
               <div class="skill-item">
-                <div class="skill-meta"><span class="skill-name">Chargement & Prévisions Coûts (EAC/ETC/VAC)</span><span class="skill-level-text">96%</span></div>
-                <div class="progress-track"><div class="progress-bar" style="width: 96%;"></div></div>
+                <div class="skill-meta"><span class="skill-name">Chargement & Prévisions Coûts (EAC/ETC/VAC)</span></div>
+                <span class="skill-badge-level" data-i18n="skill_lvl_cost">Contrôle & Prévisions Coûts • 15+ ans</span>
               </div>
               <div class="skill-item">
-                <div class="skill-meta"><span class="skill-name">Time Impact Analysis (TIA & Forensic)</span><span class="skill-level-text">95%</span></div>
-                <div class="progress-track"><div class="progress-bar" style="width: 95%;"></div></div>
+                <div class="skill-meta"><span class="skill-name">Time Impact Analysis (TIA & Forensic)</span></div>
+                <span class="skill-badge-level" data-i18n="skill_lvl_tia">Spécialiste Forensic • 10+ ans</span>
               </div>
               <div class="skill-item">
-                <div class="skill-meta"><span class="skill-name">Dossiers de Prolongation de Délai (EOT)</span><span class="skill-level-text">94%</span></div>
-                <div class="progress-track"><div class="progress-bar" style="width: 94%;"></div></div>
+                <div class="skill-meta"><span class="skill-name">Dossiers de Prolongation de Délai (EOT)</span></div>
+                <span class="skill-badge-level" data-i18n="skill_lvl_eot">Défense Réclamations • 10+ ans</span>
               </div>
               <div class="skill-item">
-                <div class="skill-meta"><span class="skill-name">Change Management & Mesure d'Avancement</span><span class="skill-level-text">95%</span></div>
-                <div class="progress-track"><div class="progress-bar" style="width: 95%;"></div></div>
+                <div class="skill-meta"><span class="skill-name">Change Management & Mesure d'Avancement</span></div>
+                <span class="skill-badge-level" data-i18n="skill_lvl_change">Gouvernance Éprouvée • 20 ans</span>
               </div>
             </div>
           </div>
@@ -757,20 +766,20 @@
             </div>
             <div class="skill-item-list">
               <div class="skill-item">
-                <div class="skill-meta"><span class="skill-name">Power BI (Tableaux de bord exécutifs, S-Curves)</span><span class="skill-level-text">96%</span></div>
-                <div class="progress-track"><div class="progress-bar" style="width: 96%;"></div></div>
+                <div class="skill-meta"><span class="skill-name">Power BI (Tableaux de bord exécutifs, S-Curves)</span></div>
+                <span class="skill-badge-level" data-i18n="skill_lvl_powerbi">Opérationnel</span>
               </div>
               <div class="skill-item">
-                <div class="skill-meta"><span class="skill-name">Excel BI (Power Query, Power Pivot, DAX)</span><span class="skill-level-text">95%</span></div>
-                <div class="progress-track"><div class="progress-bar" style="width: 95%;"></div></div>
+                <div class="skill-meta"><span class="skill-name">Excel BI (Power Query, Power Pivot, DAX)</span></div>
+                <span class="skill-badge-level" data-i18n="skill_lvl_excel">Opérationnel Avancé • 15+ ans</span>
               </div>
               <div class="skill-item">
-                <div class="skill-meta"><span class="skill-name">Rapports Mensuels & Hebdomadaires (MPR / WPR)</span><span class="skill-level-text">98%</span></div>
-                <div class="progress-track"><div class="progress-bar" style="width: 98%;"></div></div>
+                <div class="skill-meta"><span class="skill-name">Rapports Mensuels & Hebdomadaires (MPR / WPR)</span></div>
+                <span class="skill-badge-level" data-i18n="skill_lvl_mpr">Reporting Exécutif C-Level</span>
               </div>
               <div class="skill-item">
-                <div class="skill-meta"><span class="skill-name">Reporting Comité de Direction & Prêteurs</span><span class="skill-level-text">97%</span></div>
-                <div class="progress-track"><div class="progress-bar" style="width: 97%;"></div></div>
+                <div class="skill-meta"><span class="skill-name">Reporting Comité de Direction & Prêteurs</span></div>
+                <span class="skill-badge-level" data-i18n="skill_lvl_reporting">Gouvernance Stratégique • 15+ ans</span>
               </div>
             </div>
           </div>
@@ -790,20 +799,20 @@
             </div>
             <div class="skill-item-list">
               <div class="skill-item">
-                <div class="skill-meta"><span class="skill-name">Cadre Contractuel FIDIC (Clauses 8.4, 8.5, 20.1)</span><span class="skill-level-text">94%</span></div>
-                <div class="progress-track"><div class="progress-bar" style="width: 94%;"></div></div>
+                <div class="skill-meta"><span class="skill-name">Cadre Contractuel FIDIC (Clauses 8.4, 8.5, 20.1)</span></div>
+                <span class="skill-badge-level" data-i18n="skill_lvl_fidic">Pratique Contractuelle Maîtrisée</span>
               </div>
               <div class="skill-item">
-                <div class="skill-meta"><span class="skill-name">SCL Delay & Disruption Protocol (2e éd.)</span><span class="skill-level-text">95%</span></div>
-                <div class="progress-track"><div class="progress-bar" style="width: 95%;"></div></div>
+                <div class="skill-meta"><span class="skill-name">SCL Delay & Disruption Protocol (2e éd.)</span></div>
+                <span class="skill-badge-level" data-i18n="skill_lvl_scl">Application Référentielle</span>
               </div>
               <div class="skill-item">
-                <div class="skill-meta"><span class="skill-name">Méthodologie PMBOK / Certifié PMP®</span><span class="skill-level-text">98%</span></div>
-                <div class="progress-track"><div class="progress-bar" style="width: 98%;"></div></div>
+                <div class="skill-meta"><span class="skill-name">Méthodologie PMBOK / Certifié PMP®</span></div>
+                <span class="skill-badge-level" data-i18n="skill_lvl_pmbok">Certifié PMP® (PMI n° 4125591)</span>
               </div>
               <div class="skill-item">
-                <div class="skill-meta"><span class="skill-name">Leadership d'Équipes Pluridisciplinaires</span><span class="skill-level-text">96%</span></div>
-                <div class="progress-track"><div class="progress-bar" style="width: 96%;"></div></div>
+                <div class="skill-meta"><span class="skill-name">Leadership d'Équipes Pluridisciplinaires</span></div>
+                <span class="skill-badge-level" data-i18n="skill_lvl_lead">Direction & Mentorat • 15+ ans</span>
               </div>
             </div>
           </div>
@@ -818,10 +827,13 @@
       <div class="container">
         <div class="section-header">
           <span class="section-tag" data-i18n="portfolio_tag">PORTEFEUILLE INTERNATIONAL</span>
-          <h2 class="section-title" data-i18n="portfolio_title">Mégaprojets Phares (CAPEX &gt; $8 Md)</h2>
+          <h2 class="section-title" data-i18n="portfolio_title">Mégaprojets Phares (Cumul 20 ans &gt; $8 Md)</h2>
           <p class="section-desc" data-i18n="portfolio_desc">
             Sélection de réalisations emblématiques où la rigueur du contrôle de projet a sécurisé les jalons contractuels et la trajectoire budgétaire.
           </p>
+          <div class="portfolio-disclaimer-bar" data-i18n="portfolio_disclaimer">
+            CAPEX des projets (cumul sur 20 ans) ; périmètre de responsabilité détaillé sur demande.
+          </div>
         </div>
 
         <div class="projects-grid">
@@ -834,16 +846,16 @@
             <div class="project-body">
               <h3 class="project-title">Centrale Nachtigal EPCC (420 MW)</h3>
               <p class="project-desc">
-                GE Vernova / NHPC. Lot EM1 Électromécanique. Mégaprojet greenfield EPCC comprenant barrage, usine et évacuateur de crues.
+                GE Vernova / NHPC. Lot EM1 Électromécanique. Mégaprojet greenfield EPCC. Baseline contractuelle de 3 427 016 heures-homme et ~12 000 activités.
               </p>
               <div class="project-kpi-stats">
                 <div class="p-kpi">
-                  <span class="p-kpi-val">~12 000</span>
-                  <span class="p-kpi-lbl">Activités P6 IMS</span>
+                  <span class="p-kpi-val">0,93 / 0,98</span>
+                  <span class="p-kpi-lbl">SPI / CPI Cumulés</span>
                 </div>
                 <div class="p-kpi">
-                  <span class="p-kpi-val">100%</span>
-                  <span class="p-kpi-lbl">Conformité FIDIC</span>
+                  <span class="p-kpi-val">+49 Jours</span>
+                  <span class="p-kpi-lbl">EOT FIDIC &amp; SCL</span>
                 </div>
               </div>
               <div class="project-footer">
@@ -862,16 +874,16 @@
             <div class="project-body">
               <h3 class="project-title">Portefeuille TotalEnergies Congo</h3>
               <p class="project-desc">
-                TotalEnergies Congo. 4 packages offshore simultanés : ALIMA, NKOSSA, SENDJI, DJENO. Gestion de portefeuilles multi-sites.
+                TotalEnergies Congo. 4 lots offshore simultanés : ALIMA, NKOSSA, SENDJI, DJENO. Maîtrise des interfaces avec moins de 3 % de dérive planning.
               </p>
               <div class="project-kpi-stats">
                 <div class="p-kpi">
-                  <span class="p-kpi-val">4 Sites</span>
-                  <span class="p-kpi-lbl">Packages Simultanés</span>
+                  <span class="p-kpi-val">&lt; 3%</span>
+                  <span class="p-kpi-lbl">Dérive 4 Lots Offshore</span>
                 </div>
                 <div class="p-kpi">
-                  <span class="p-kpi-val">0 Arrêt</span>
-                  <span class="p-kpi-lbl">Non Planifié</span>
+                  <span class="p-kpi-val">4 Lots</span>
+                  <span class="p-kpi-lbl">Packages Simultanés</span>
                 </div>
               </div>
               <div class="project-footer">
@@ -890,12 +902,12 @@
             <div class="project-body">
               <h3 class="project-title">Pipeline Onshore/Offshore 100 km</h3>
               <p class="project-desc">
-                Perenco Cameroun. Greenfield EPC sur 33 mois. Pose d'un pipeline critique de transport de gaz et pétrole haute pression.
+                Perenco Cameroun. Greenfield EPC sur 33 mois. Pose d'un pipeline haute pression. Conformité HSE maintenue au-dessus de 98 % sur 33 mois.
               </p>
               <div class="project-kpi-stats">
                 <div class="p-kpi">
-                  <span class="p-kpi-val">33 Mois</span>
-                  <span class="p-kpi-lbl">Délai Contractuel</span>
+                  <span class="p-kpi-val">&gt; 98%</span>
+                  <span class="p-kpi-lbl">Conformité HSE (33 m)</span>
                 </div>
                 <div class="p-kpi">
                   <span class="p-kpi-val">100 km</span>
@@ -1268,6 +1280,37 @@
                     </div>
                   </div>
                 </div>
+
+                <!-- Direct CV Download Block -->
+                <div class="contact-cv-block">
+                  <div class="contact-cv-title">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                      <polyline points="14 2 14 8 20 8"></polyline>
+                      <line x1="12" y1="18" x2="12" y2="12"></line>
+                      <line x1="9" y1="15" x2="15" y2="15"></line>
+                    </svg>
+                    <span data-i18n="contact_cv_label">Télécharger le CV Complet (PDF) :</span>
+                  </div>
+                  <div class="contact-cv-buttons">
+                    <a href="assets/cv/CV_Philippe_NOUGOUE_FR.pdf" download="CV_Philippe_NOUGOUE_FR.pdf" class="btn-cv-download btn-cv-fr">
+                      <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                        <polyline points="7 10 12 15 17 10"></polyline>
+                        <line x1="12" y1="15" x2="12" y2="3"></line>
+                      </svg>
+                      <span>CV Français (PDF)</span>
+                    </a>
+                    <a href="assets/cv/CV_Philippe_NOUGOUE_EN.pdf" download="CV_Philippe_NOUGOUE_EN.pdf" class="btn-cv-download btn-cv-en">
+                      <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                        <polyline points="7 10 12 15 17 10"></polyline>
+                        <line x1="12" y1="15" x2="12" y2="3"></line>
+                      </svg>
+                      <span>Resume English (PDF)</span>
+                    </a>
+                  </div>
+                </div>
               </div>
             </div>
 
@@ -1377,15 +1420,29 @@
       <div>
         <p data-i18n="footer_copy">© 2026 <strong>Philippe NOUGOUE</strong> • Senior Planning Engineer & Project Controls Manager.</p>
         <p style="font-size: 0.8rem; margin-top: 4px; color: var(--text-muted);" data-i18n="footer_creds">PMP® n° 4125591 • Oracle Primavera P6 Certified Expert.</p>
+        <p style="font-size: 0.72rem; margin-top: 6px; color: var(--text-muted); opacity: 0.85;" data-i18n="portfolio_disclaimer">* CAPEX des projets (cumul sur 20 ans) ; périmètre de responsabilité détaillé sur demande.</p>
       </div>
-      <div style="display: flex; align-items: center; gap: 20px;">
+      <div style="display: flex; align-items: center; gap: 12px; flex-wrap: wrap;">
         <span class="footer-online-indicator">
           <span class="status-pulse"></span>
           <span data-i18n="footer_status">Disponible pour mission • En ligne</span>
         </span>
-        <button class="btn btn-secondary btn-sm trigger-print-cv" title="Télécharger le CV au format PDF">
-          <span>Format PDF A4</span>
-        </button>
+        <a href="assets/cv/CV_Philippe_NOUGOUE_FR.pdf" download="CV_Philippe_NOUGOUE_FR.pdf" class="btn btn-secondary btn-sm" id="footer-download-fr" title="Télécharger le CV en Français (PDF)">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="margin-right: 6px;">
+            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+            <polyline points="7 10 12 15 17 10"></polyline>
+            <line x1="12" y1="15" x2="12" y2="3"></line>
+          </svg>
+          <span>CV FR (PDF)</span>
+        </a>
+        <a href="assets/cv/CV_Philippe_NOUGOUE_EN.pdf" download="CV_Philippe_NOUGOUE_EN.pdf" class="btn btn-secondary btn-sm" id="footer-download-en" title="Download Resume in English (PDF)">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="margin-right: 6px;">
+            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+            <polyline points="7 10 12 15 17 10"></polyline>
+            <line x1="12" y1="15" x2="12" y2="3"></line>
+          </svg>
+          <span>CV EN (PDF)</span>
+        </a>
       </div>
     </div>
   </footer>

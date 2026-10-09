@@ -270,13 +270,22 @@
     font-size: 8pt !important;
   }
 
-  .progress-track {
-    height: 4px !important;
-    border: 1pt solid #cbd5e1 !important;
+  .skill-item {
+    display: flex !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+    padding: 3px 0 !important;
+    border-bottom: 0.5pt solid #f1f5f9 !important;
   }
 
-  .progress-bar {
-    background: #8F691A !important;
+  .skill-badge-level {
+    font-size: 7pt !important;
+    font-weight: 700 !important;
+    color: #8F691A !important;
+    background: #fefce8 !important;
+    border: 0.5pt solid #fef08a !important;
+    padding: 1px 4px !important;
+    border-radius: 3px !important;
   }
 
   /* Projects Grid for Print */

@@ -50,24 +50,26 @@ document.addEventListener('DOMContentLoaded', () => {
       nav_download_cv: "Télécharger CV",
 
       // Hero
-      status_badge: "DISPONIBLE IMMÉDIATEMENT • CAPEX > $8 Md",
+      status_badge: "DISPONIBLE IMMÉDIATEMENT • CAPEX > $8 Md (CUMUL 20 ANS)",
       hero_title_role: "Senior Planning Engineer & Project Controls Manager",
       hero_summary: "20+ années d’expertise éprouvée dans la gouvernance planning, coûts, risques et reporting sur mégaprojets <strong>EPC / EPCC / EPCM</strong> internationaux (Énergie, Oil & Gas, Hydroélectrique, Raffinerie, Pipeline & Offshore). Conseiller de confiance des Directeurs de Projet sur programmes jusqu'à <strong>12 000 activités P6</strong> et budgets jusqu'à <strong>2,5 milliards USD</strong>.",
-      hero_btn_download: "Télécharger mon CV (PDF)",
+      hero_btn_download_fr: "Télécharger CV (Français)",
+      hero_btn_download_en: "Download CV (English)",
       hero_btn_whatsapp: "WhatsApp Direct",
       hero_btn_contact: "Me Contacter",
       hero_btn_sim: "Simulateur EVM",
       stat_exp: "Années d’Expérience",
-      stat_portfolio: "Portefeuille Piloté",
+      stat_portfolio: "Portefeuille Piloté (Cumul 20 ans)*",
       stat_max_proj: "Plus Gros Mégaprojet",
       stat_ims: "Activités IMS / P6",
+      hero_stat_note: "* CAPEX des projets globaux ; périmètre de responsabilité détaillé sur demande.",
 
       // About
       about_tag: "MANIFESTE PROFESSIONNEL",
       about_title: "Maîtrise & Gouvernance des Mégaprojets",
       about_subtitle: "Conseiller stratégique des comités de direction et garant de l'intégrité contractuelle des délais et des coûts.",
-      about_p1: "Senior Planning & Project Controls Manager disposant de <strong class='about-manifesto-highlight'>20+ ans d'expérience</strong> dans le pilotage de la gouvernance planning, coûts, risques et reporting sur des mégaprojets <strong>EPC / EPCC / EPCM</strong> dans les secteurs Énergie, Oil & Gas, Hydroélectrique, Raffinerie, Pipeline et Offshore — avec un portefeuille CAPEX supérieur à <strong class='about-manifesto-highlight'>8 milliards USD</strong>.",
-      about_p2: "Certifié <strong>PMP® (n° 4125591)</strong> et <strong>Oracle Primavera P6 (Expert, 15+ ans)</strong>. Expérience confirmée de pilotage du Planning Directeur Intégré (IMS) sur des programmes allant jusqu'à <strong>~12 000 activités</strong>, d'encadrement d'équipes Project Controls pluridisciplinaires, de mise en œuvre de la gouvernance <strong>Earned Value Management (EVM)</strong>, de pilotage des prévisions de délais et de coûts, et de production d'analyses exécutives via tableaux de bord <strong>Power BI</strong>.",
+      about_p1: "Senior Planning & Project Controls Manager disposant de <strong class='about-manifesto-highlight'>20+ ans d'expérience</strong> dans le pilotage de la gouvernance planning, coûts, risques et reporting sur des mégaprojets <strong>EPC / EPCC / EPCM</strong> dans les secteurs Énergie, Oil & Gas, Hydroélectrique, Raffinerie, Pipeline et Offshore — avec un portefeuille cumulé sur vingt ans supérieur à <strong class='about-manifesto-highlight'>8 milliards USD</strong> (CAPEX des projets globaux ; périmètre de responsabilité détaillé sur demande).",
+      about_p2: "Certifié <strong>PMP® (n° 4125591)</strong> et <strong>Oracle Primavera P6 (Expert, 15+ ans)</strong>. Expérience confirmée de pilotage du Planning Directeur Intégré (IMS) sur des programmes allant jusqu'à <strong>~12 000 activités</strong> et <strong>3,4 M heures-homme</strong>, d'encadrement d'équipes Project Controls pluridisciplinaires, de mise en œuvre de la gouvernance <strong>Earned Value Management (EVM)</strong>, de pilotage des prévisions de délais et de coûts, et de production d'analyses exécutives via tableaux de bord <strong>Power BI</strong>.",
       about_p3: "Expertise reconnue en analyse du chemin critique (CPM), gouvernance qualité planning <strong>DCMA-14</strong>, analyse de risque probabiliste (QSRA), <strong>Time Impact Analysis (TIA)</strong>, dossiers de prolongation de délai (EOT) et substantiation des réclamations sous cadre <strong>FIDIC</strong> et <strong>SCL Delay & Disruption Protocol</strong>. Conseiller de confiance des Directeurs de Projet sur mégaprojets greenfield et brownfield, onshore et offshore. Français langue maternelle, anglais professionnel courant.",
 
       // Experience Timeline
@@ -111,10 +113,31 @@ document.addEventListener('DOMContentLoaded', () => {
       skill_cat4_title: "Gouvernance & Standards",
       skill_cat4_sub: "FIDIC, SCL Protocol & PMP®",
 
+      // Skill levels (Named levels & seniority)
+      skill_lvl_p6: "Certifié Expert • 15+ ans",
+      skill_lvl_cpm: "Expertise Maître • 20 ans",
+      skill_lvl_ims: "Pilotage Mégaprojets • 15+ ans",
+      skill_lvl_dcma: "Audit Qualité & Conformité",
+      skill_lvl_qsra: "Opérationnel Avancé • 10+ ans",
+      skill_lvl_evm: "Référent Méthodologique • 15+ ans",
+      skill_lvl_cost: "Contrôle de Gestion Projets • 15+ ans",
+      skill_lvl_tia: "Spécialiste Forensic • 10+ ans",
+      skill_lvl_eot: "Substantiation Contractuelle • 10+ ans",
+      skill_lvl_change: "Gouvernance Éprouvée • 20 ans",
+      skill_lvl_powerbi: "Opérationnel",
+      skill_lvl_excel: "Opérationnel Avancé • 15+ ans",
+      skill_lvl_mpr: "Standard Exécutif C-Level",
+      skill_lvl_reporting: "Gouvernance Stratégique • 15+ ans",
+      skill_lvl_fidic: "Pratique Contractuelle Approfondie",
+      skill_lvl_scl: "Application Référentielle",
+      skill_lvl_pmbok: "Certifié PMP® (PMI n° 4125591)",
+      skill_lvl_lead: "Direction & Mentoring • 15+ ans",
+
       // Portfolio
       portfolio_tag: "PORTEFEUILLE INTERNATIONAL",
-      portfolio_title: "Mégaprojets Phares (CAPEX > $8 Md)",
+      portfolio_title: "Mégaprojets Phares (CAPEX > $8 Md cumul 20 ans)",
       portfolio_desc: "Sélection de réalisations emblématiques où la rigueur du contrôle de projet a sécurisé les jalons contractuels et la trajectoire budgétaire.",
+      portfolio_disclaimer: "CAPEX des projets (cumul sur vingt ans) ; périmètre de responsabilité détaillé sur demande.",
       btn_project_details: "Détails & Stratégie",
 
       // Education & Certifications
@@ -152,6 +175,7 @@ document.addEventListener('DOMContentLoaded', () => {
       contact_label_mobility: "Langues & Mobilité",
       contact_val_mobility: "Français (maternelle) • Anglais courant • Mobile International",
       contact_tz_label: "Fuseau Horaire :",
+      contact_cv_label: "Télécharger le CV Complet :",
       contact_form_title: "Envoyer un Message Direct",
       contact_form_intro: "Votre message sera transmis directement à <strong>philippe.nougoue@gmail.com</strong>.",
       form_label_name: "Nom & Prénom *",
@@ -171,8 +195,10 @@ document.addEventListener('DOMContentLoaded', () => {
       footer_copy: "© 2026 <strong>Philippe NOUGOUE</strong> • Senior Planning Engineer & Project Controls Manager.",
       footer_creds: "PMP® n° 4125591 • Oracle Primavera P6 Certified Expert.",
       footer_status: "Disponible pour mission • En ligne",
+      footer_capex_note: "* Les montants CAPEX indiqués représentent les budgets des projets globaux (cumul 20 ans) ; périmètre de responsabilité détaillé sur demande.",
       toast_copied: "Copié dans le presse-papier !",
-      toast_print: "Ouverture du format A4 d’impression en cours..."
+      toast_download_fr: "Téléchargement du CV de Philippe NOUGOUE (Français - PDF)...",
+      toast_download_en: "Téléchargement du CV de Philippe NOUGOUE (Anglais - PDF)..."
     },
 
     en: {
@@ -187,24 +213,26 @@ document.addEventListener('DOMContentLoaded', () => {
       nav_download_cv: "Download Resume",
 
       // Hero
-      status_badge: "AVAILABLE IMMEDIATELY • CAPEX > $8B",
+      status_badge: "AVAILABLE IMMEDIATELY • CAPEX > $8B (20-YR CUMULATIVE)",
       hero_title_role: "Senior Planning Engineer & Project Controls Manager",
       hero_summary: "20+ years of distinguished expertise delivering schedule governance, cost control, risk mitigation, and executive reporting across international <strong>EPC / EPCC / EPCM</strong> mega-projects (Energy, Oil & Gas, Hydropower, Refining, Pipeline & Offshore). Trusted advisor to Project Directors on programs up to <strong>12,000 P6 activities</strong> and single capital expenditures up to <strong>2.5 billion USD</strong>.",
-      hero_btn_download: "Download Resume (PDF)",
+      hero_btn_download_fr: "Télécharger CV (Français)",
+      hero_btn_download_en: "Download Resume (English)",
       hero_btn_whatsapp: "WhatsApp Direct",
       hero_btn_contact: "Contact Me",
       hero_btn_sim: "Live EVM Engine",
       stat_exp: "Years Experience",
-      stat_portfolio: "Portfolio CAPEX Managed",
+      stat_portfolio: "Portfolio Managed (20-yr Cumul.)*",
       stat_max_proj: "Largest Single Mega-Project",
       stat_ims: "Activities IMS / P6",
+      hero_stat_note: "* Overall project CAPEX; detailed scope of responsibility available upon request.",
 
       // About
       about_tag: "PROFESSIONAL MANIFESTO",
       about_title: "Mega-Projects Governance & Leadership",
       about_subtitle: "Strategic advisor to Steering Committees, safeguarding contractual schedule integrity and cost certainty.",
-      about_p1: "Senior Planning & Project Controls Manager with <strong class='about-manifesto-highlight'>20+ years of proven leadership</strong> steering project schedule governance, cost engineering, quantitative risk, and reporting across multi-billion <strong>EPC / EPCC / EPCM</strong> mega-projects in Energy, Oil & Gas, Hydropower, Refining, Pipeline, and Offshore sectors — with a cumulative CAPEX portfolio exceeding <strong class='about-manifesto-highlight'>8 billion USD</strong>.",
-      about_p2: "Certified <strong>PMP® (License #4125591)</strong> and <strong>Oracle Primavera P6 (Expert, 15+ years)</strong>. Demonstrated track record developing and controlling Integrated Master Schedules (IMS) containing up to <strong>~12,000 activities</strong>, managing multi-disciplinary Project Controls teams, implementing <strong>Earned Value Management (EVM)</strong> systems, forecasting costs/delays, and delivering executive insights via automated <strong>Power BI</strong> dashboards.",
+      about_p1: "Senior Planning & Project Controls Manager with <strong class='about-manifesto-highlight'>20+ years of proven leadership</strong> steering project schedule governance, cost engineering, quantitative risk, and reporting across multi-billion <strong>EPC / EPCC / EPCM</strong> mega-projects in Energy, Oil & Gas, Hydropower, Refining, Pipeline, and Offshore sectors — with a 20-year cumulative CAPEX portfolio exceeding <strong class='about-manifesto-highlight'>8 billion USD</strong> (overall project CAPEX; detailed scope of responsibility available upon request).",
+      about_p2: "Certified <strong>PMP® (License #4125591)</strong> and <strong>Oracle Primavera P6 (Expert, 15+ years)</strong>. Demonstrated track record developing and controlling Integrated Master Schedules (IMS) containing up to <strong>~12,000 activities</strong> and <strong>3.4M man-hours</strong>, managing multi-disciplinary Project Controls teams, implementing <strong>Earned Value Management (EVM)</strong> systems, forecasting costs/delays, and delivering executive insights via automated <strong>Power BI</strong> dashboards.",
       about_p3: "Recognized authority in Critical Path Method (CPM), <strong>DCMA-14</strong> schedule health metrics, Quantitative Schedule Risk Analysis (QSRA Monte Carlo), <strong>Time Impact Analysis (TIA)</strong>, Extension of Time (EOT) claim substantiation under <strong>FIDIC</strong> contracts and the <strong>SCL Delay & Disruption Protocol</strong>. Native French, fluent professional English. Immediately available for international assignments.",
 
       // Experience Timeline
@@ -248,10 +276,31 @@ document.addEventListener('DOMContentLoaded', () => {
       skill_cat4_title: "Governance & Contractual Frameworks",
       skill_cat4_sub: "FIDIC, SCL Protocol & PMP®",
 
+      // Skill levels (Named levels & seniority)
+      skill_lvl_p6: "Certified Expert • 15+ yrs",
+      skill_lvl_cpm: "Master Level • 20 yrs",
+      skill_lvl_ims: "Mega-Projects Lead • 15+ yrs",
+      skill_lvl_dcma: "Quality Audit & Compliance",
+      skill_lvl_qsra: "Advanced Operational • 10+ yrs",
+      skill_lvl_evm: "Methodological Authority • 15+ yrs",
+      skill_lvl_cost: "Cost Control & Forecasting • 15+ yrs",
+      skill_lvl_tia: "Forensic Specialist • 10+ yrs",
+      skill_lvl_eot: "Contractual Claims Defense • 10+ yrs",
+      skill_lvl_change: "Proven Governance • 20 yrs",
+      skill_lvl_powerbi: "Operational",
+      skill_lvl_excel: "Advanced Operational • 15+ yrs",
+      skill_lvl_mpr: "C-Level Executive Reporting",
+      skill_lvl_reporting: "Strategic Governance • 15+ yrs",
+      skill_lvl_fidic: "Contractual Practice Mastery",
+      skill_lvl_scl: "Benchmark Implementation",
+      skill_lvl_pmbok: "PMP® Credential (PMI #4125591)",
+      skill_lvl_lead: "Team Direction & Mentoring • 15+ yrs",
+
       // Portfolio
       portfolio_tag: "INTERNATIONAL PORTFOLIO",
-      portfolio_title: "Signature Mega-Projects (CAPEX > $8B)",
+      portfolio_title: "Signature Mega-Projects (CAPEX > $8B 20-yr Cumul.)",
       portfolio_desc: "Curated selection of iconic programs where project controls rigor safeguarded contractual milestones and commercial recovery.",
+      portfolio_disclaimer: "Project CAPEX (20-year cumulative); detailed scope of responsibility available upon request.",
       btn_project_details: "Strategy & Details",
 
       // Education & Certifications
@@ -289,6 +338,7 @@ document.addEventListener('DOMContentLoaded', () => {
       contact_label_mobility: "Languages & Mobility",
       contact_val_mobility: "French (Native) • English (Fluent) • Worldwide Mobility",
       contact_tz_label: "Current Time Zone:",
+      contact_cv_label: "Download Full Resume:",
       contact_form_title: "Send a Direct Message",
       contact_form_intro: "Your inquiry will be addressed directly to <strong>philippe.nougoue@gmail.com</strong>.",
       form_label_name: "Full Name *",
@@ -308,8 +358,10 @@ document.addEventListener('DOMContentLoaded', () => {
       footer_copy: "© 2026 <strong>Philippe NOUGOUE</strong> • Senior Planning Engineer & Project Controls Manager.",
       footer_creds: "PMP® Lic. #4125591 • Oracle Primavera P6 Certified Expert.",
       footer_status: "Available for Immediate Mandates • Online",
+      footer_capex_note: "* The stated CAPEX figures represent overall project budgets (20-year cumulative); detailed scope of responsibility available upon request.",
       toast_copied: "Copied to clipboard!",
-      toast_print: "Opening high-definition printable A4 layout..."
+      toast_download_fr: "Downloading Philippe NOUGOUE's French Resume (PDF)...",
+      toast_download_en: "Downloading Philippe NOUGOUE's English Resume (PDF)..."
     }
   };
 
@@ -350,6 +402,32 @@ document.addEventListener('DOMContentLoaded', () => {
       emailInput?.setAttribute('placeholder', 'E.g., director@epc-consortium.com');
       subjectInput?.setAttribute('placeholder', 'E.g., Project Controls Director — Hydropower / O&G Program');
       messageInput?.setAttribute('placeholder', 'Specify project scale, location, required tools, and timeline...');
+    }
+
+    // Synchronize Download CV buttons with language
+    const navCvBtn = document.getElementById('nav-download-cv');
+    if (navCvBtn) {
+      if (lang === 'fr') {
+        navCvBtn.setAttribute('href', 'assets/cv/CV_Philippe_NOUGOUE_FR.pdf');
+        navCvBtn.setAttribute('download', 'CV_Philippe_NOUGOUE_FR.pdf');
+        navCvBtn.setAttribute('title', 'Télécharger le CV de Philippe NOUGOUE (Français - PDF)');
+      } else {
+        navCvBtn.setAttribute('href', 'assets/cv/CV_Philippe_NOUGOUE_EN.pdf');
+        navCvBtn.setAttribute('download', 'CV_Philippe_NOUGOUE_EN.pdf');
+        navCvBtn.setAttribute('title', 'Download Philippe NOUGOUE Resume (English - PDF)');
+      }
+    }
+
+    const heroCvFr = document.getElementById('hero-download-fr');
+    const heroCvEn = document.getElementById('hero-download-en');
+    if (heroCvFr && heroCvEn) {
+      if (lang === 'fr') {
+        heroCvFr.className = 'btn btn-primary hero-btn-cv hero-btn-cv-fr';
+        heroCvEn.className = 'btn btn-secondary hero-btn-cv hero-btn-cv-en';
+      } else {
+        heroCvEn.className = 'btn btn-primary hero-btn-cv hero-btn-cv-en';
+        heroCvFr.className = 'btn btn-secondary hero-btn-cv hero-btn-cv-fr';
+      }
     }
 
     // Refresh EVM simulator texts
@@ -472,12 +550,23 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   // ------------------------------------------------------------------------
-  // 8. PRINT / DOWNLOAD CV TRIGGER
+  // 8. DOWNLOAD CV NOTIFICATIONS & PRINT TRIGGER
   // ------------------------------------------------------------------------
+  document.querySelectorAll('a[download]').forEach((link) => {
+    link.addEventListener('click', () => {
+      const href = link.getAttribute('href') || '';
+      const isFr = href.includes('_FR.');
+      const toastMsg = isFr
+        ? (translations[currentLang]?.toast_download_fr || "Téléchargement du CV (Français - PDF)...")
+        : (translations[currentLang]?.toast_download_en || "Downloading Resume (English - PDF)...");
+      showToast(toastMsg);
+    });
+  });
+
   document.querySelectorAll('.trigger-print-cv').forEach((btn) => {
     btn.addEventListener('click', (e) => {
       e.preventDefault();
-      showToast(translations[currentLang].toast_print);
+      showToast(translations[currentLang]?.toast_print || "Impression...");
       setTimeout(() => {
         window.print();
       }, 500);
@@ -496,66 +585,66 @@ document.addEventListener('DOMContentLoaded', () => {
       fr: {
         title: 'Centrale Hydroélectrique Nachtigal EPCC (420 MW)',
         client: 'NHPC | Consortium GE Vernova (Leader) & Elecnor',
-        capex: '$1.2 Md USD',
+        capex: '$1.2 Md USD (Projet global)',
         role: 'Lead Planning & Project Controls Manager',
-        scope: 'Mégaprojet greenfield EPCC, Lot EM1 Électromécanique, Planning Directeur Intégré (IMS) de ~12 000 activités P6, coordination multi-packages.',
+        scope: 'Mégaprojet greenfield EPCC, Lot EM1 Électromécanique, Planning Directeur Intégré (IMS) de ~12 000 activités P6, baseline de 3 427 016 heures-homme.',
         challenges: 'Interfaces critiques entre génie civil lourd (barrage, usine) et montage hydro-mécanique sous fortes contraintes de crues fluviales.',
-        solution: 'Pilotage rigoureux du chemin critique CPM, gouvernance hebdomadaire EVM, synchronisation fine des livraisons et qualification des réclamations contractuelles (FIDIC / EOT).',
-        result: 'Sécurisation de la trajectoire de mise en service et des jalons d’injection réseau. Reporting exécutif automatisé sous Power BI adopté par le comité de pilotage.'
+        solution: 'Pilotage rigoureux du chemin critique CPM, gouvernance hebdomadaire EVM (SPI cumulé 0,93, CPI 0,98) et instruction méthodique d’une demande d’Extension of Time (EOT) de 49 jours calendaires entièrement substantiée sous clauses FIDIC 8.4/8.5/20.1 et SCL Delay Protocol.',
+        result: 'Baseline de 3 427 016 heures-homme et ~12 000 activités P6 maîtrisée. Sécurisation de la mise en service et des jalons d’injection réseau. Reporting exécutif Power BI adopté par le comité de pilotage NHPC et les prêteurs internationaux.'
       },
       en: {
         title: 'Nachtigal Hydropower Plant EPCC (420 MW)',
         client: 'NHPC | GE Vernova (Consortium Leader) & Elecnor',
-        capex: '$1.2B USD',
+        capex: '$1.2B USD (Overall Project)',
         role: 'Lead Planning & Project Controls Manager',
-        scope: 'Greenfield EPCC mega-project, Electro-Mechanical Package EM1, Integrated Master Schedule (IMS) comprising ~12,000 P6 activities, multi-package coordination.',
+        scope: 'Greenfield EPCC mega-project, Electro-Mechanical Package EM1, Integrated Master Schedule (IMS) comprising ~12,000 P6 activities, contractual baseline of 3,427,016 man-hours.',
         challenges: 'Critical interfaces between civil engineering (dam, powerhouse) and hydro-mechanical installation with river flood seasonal constraints.',
-        solution: 'Rigorous Critical Path Method (CPM) governance, weekly EVM cadence, delivery synchronization, and contractual claim defense under FIDIC clauses.',
-        result: 'Commercial operation milestones secured. Automated Power BI executive reporting adopted by Project Steering Committee and International Lenders.'
+        solution: 'Rigorous Critical Path Method (CPM) governance, weekly EVM cadence (cumulative SPI 0.93, CPI 0.98), and robust substantiation of a 49-day Extension of Time (EOT) claim under FIDIC 8.4/8.5/20.1 and SCL Protocol.',
+        result: 'Baseline of 3,427,016 man-hours and ~12,000 P6 activities controlled. Commercial operation milestones secured and Power BI executive analytics adopted by Project Steering Committee and International Lenders.'
       }
     },
     congo_portfolio: {
       fr: {
         title: 'Portefeuille Offshore TotalEnergies Congo (4 Packages Simultanés)',
         client: 'TotalEnergies EP Congo',
-        capex: '$1.5 Md+ USD',
+        capex: '$1.5 Md+ USD (Portefeuille global)',
         role: 'Senior Planning Lead — Contrôle de portefeuille multi-packages',
         scope: '4 packages majeurs simultanés : ALIMA, NKOSSA, SENDJI, DJENO en environnement brownfield offshore.',
         challenges: 'Simultanéité d’opérations sur plateformes en production, logistique maritime complexe et arrêts techniques programmés.',
-        solution: 'Modélisation intégrée des ressources, nivellement des équipes spécialisées offshore et surveillance continue des tendances de coûts.',
-        result: 'Zéro arrêt non planifié majeur, optimisation des campagnes d’interventions maritimes et gouvernance prévisionnelle saluée par la direction filiale.'
+        solution: 'Modélisation intégrée des ressources, nivellement des équipes spécialisées offshore, gouvernance Project Controls standardisée et surveillance continue des tendances de coûts.',
+        result: 'Moins de 3 % de dérive planning consolidée sur l’ensemble des quatre lots offshore TotalEnergies Congo sur un portefeuille de 1,5 Md USD+, optimisation des campagnes maritimes et gouvernance saluée par la direction filiale.'
       },
       en: {
         title: 'TotalEnergies Congo Offshore Portfolio (4 Concurrent Packages)',
         client: 'TotalEnergies EP Congo',
-        capex: '$1.5B+ USD',
+        capex: '$1.5B+ USD (Portfolio Scope)',
         role: 'Senior Planning Lead — Multi-Package Portfolio Controls',
         scope: '4 concurrent offshore packages: ALIMA, NKOSSA, SENDJI, DJENO in brownfield offshore operational environments.',
         challenges: 'Simultaneous operations on live producing platforms, complex marine logistics, and strict turnaround windows.',
-        solution: 'Integrated multi-site resource modeling, leveling of offshore specialized crews, and proactive cost variance monitoring.',
-        result: 'Zero major unplanned shutdowns, optimized marine campaigns, and predictive schedule controls praised by TotalEnergies executive management.'
+        solution: 'Integrated multi-site resource modeling, leveling of offshore specialized crews, standardized controls across contractors, and proactive cost variance monitoring.',
+        result: 'Less than 3% schedule variance across all four TotalEnergies Congo offshore packages on a $1.5B+ portfolio, with predictive schedule governance praised by TotalEnergies executive management.'
       }
     },
     perenco_pipeline: {
       fr: {
         title: 'Pipeline Onshore/Offshore 100 km EPC',
         client: 'Perenco Cameroun',
-        capex: '$600 M USD',
+        capex: '$600 M USD (Projet global)',
         role: 'Planning Manager',
         scope: 'Greenfield EPC sur 33 mois, pose de pipeline gazier/pétrolier haute pression reliant installations de traitement et terminal.',
         challenges: 'Passages environnementaux délicats, raccordements sous-marins et fenêtres météo côtières strictes.',
-        solution: 'Planning Primavera P6 phasé avec gestion proactive des dérives de cadences de soudage et dragage.',
-        result: 'Livraison du pipeline dans les délais contractuels sans réclamation de tiers non résolue.'
+        solution: 'Planning Primavera P6 phasé Niveau 4 avec contrôle rigoureux des cadences de pose, soudage et ensouillage, et gestion proactive des Change Orders.',
+        result: 'Pipeline de 100 km livré dans les délais contractuels sur 33 mois, avec une conformité HSE maintenue au-dessus de 98 % et zéro réclamation de tiers non résolue.'
       },
       en: {
         title: '100 km Onshore/Offshore Pipeline EPC',
         client: 'Perenco Cameroon',
-        capex: '$600M USD',
+        capex: '$600M USD (Overall Project)',
         role: 'Planning Manager',
         scope: '33-month greenfield EPC project, high-pressure oil and gas export pipeline connecting processing facilities to marine terminal.',
         challenges: 'Sensitive environmental crossings, subsea tie-ins, and strict coastal marine weather windows.',
-        solution: 'Phased Primavera P6 schedule controls with proactive daily tracking of pipe-laying, welding, and dredging rates.',
-        result: 'Commercial pipeline delivery within contractual timeline with zero unsettled third-party claims.'
+        solution: 'Level 4 phased Primavera P6 schedule controls with proactive daily tracking of pipe-laying, welding, and dredging rates, plus proactive Change Management.',
+        result: '100 km pipeline delivered on schedule over 33 months, with HSE compliance maintained above 98% and zero unsettled third-party claims.'
       }
     },
     anguille: {
@@ -805,4 +894,19 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     });
   }
+
+  // ------------------------------------------------------------------------
+  // 11. PDF RESUME DOWNLOAD TOAST NOTIFICATIONS
+  // ------------------------------------------------------------------------
+  document.querySelectorAll('a[href$=".pdf"]').forEach((link) => {
+    link.addEventListener('click', () => {
+      const href = link.getAttribute('href') || '';
+      const isEnglish = href.includes('_EN.pdf');
+      const message = isEnglish
+        ? (translations[currentLang]?.toast_download_en || "Downloading English Resume (PDF)...")
+        : (translations[currentLang]?.toast_download_fr || "Téléchargement du CV en Français (PDF)...");
+      showToast(message);
+    });
+  });
 });
+
